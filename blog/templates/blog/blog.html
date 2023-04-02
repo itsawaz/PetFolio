@@ -103,28 +103,36 @@
 
       <h4>Create Post</h4>
 
-      <form action="" method="POST"  style="width: 350px; height: 400px;">
-
+      <form action="" method="POST"  style="width: 350px; height: 400px;" id="post-form">
+            {% csrf_token %}
           <div class="form-group">
               <label for="title">Title <span class="require">*</span></label>
-              <input type="text" class="form-control" name="title" />
+              <input type="text" class="form-control" name="title" required/>
           </div>
 
           <div class="form-group">
               <label for="description">Description<span class="require">*</span></label>
-              <textarea rows="5" class="form-control" name="description" ></textarea>
+              <textarea rows="5" class="form-control" name="description" required></textarea>
+              {% if messages %}
+            {% for message in messages %}
+               <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% endfor %}
+          {% endif %}
           </div>
 
           <div class="form-group">
-              <p><span class="require">*</span> - required fields</p>
+              <p><span class="require">*</span>  required fields</p>
           </div>
 
           <div class="form-group">
               <button type="submit"  class="btn btn-primary">
                   Create
               </button>
-              <button class="btn btn-default">
-                  Cancel
+              <button class="btn btn-secondary" type="button" onclick="clearForm()" >
+                  Clear
               </button>
           </div>
 
@@ -135,4 +143,9 @@
 </div>
 </div>
 </div>
+           <script>
+function clearForm() {
+    document.getElementById("post-form").reset();
+}
+</script>
 {% endblock content%}

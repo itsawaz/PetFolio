@@ -7,4 +7,8 @@ class Post(models.Model):
     content = models.TextField()
     date_posted = models.DateTimeField(auto_now_add=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
+    pet_type = models.CharField(max_length=50)
     
+
+    def __str__(self):
+        return self.title
