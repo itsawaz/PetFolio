@@ -27,21 +27,22 @@
         <h1 class="display-4 fw-bold lh-1 mb-3">Petfolio</h1>
         <p class="col-lg-10 fs-4">Welcome to our pet care platform! Please login to access the best possible tools and resources to keep your furry friend healthy and happy. With health tracking, veterinary booking, pet supplies, and pet blogging all in one place, we make it easy to care for your pet. Explore our platform today!  </div>
       <div class="col-md-10 mx-auto col-lg-5">
-        <form class="p-4 p-md-5 border rounded-3 bg-light">
+        <form class="p-4 p-md-5 border rounded-3 bg-light" method="post" action="">
+            {% csrf_token %}
           <div class="form-floating mb-3">
-            <input type="Username" class="form-control" id="floatingInput" placeholder="Username123">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Username123" name="username">
             <label for="floatingInput">Username</label>
           </div>
           <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floatingInput" placeholder="dog/cat/fish">
+            <input type="text" class="form-control" id="floatingInput" placeholder="dog/cat/fish" name="pet_type">
             <label for="floatingInput">Pet Type</label>
           </div>
           <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="email">
             <label for="floatingInput">Email address</label>
           </div>
           <div class="form-floating mb-3">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password">
             <label for="floatingPassword">Password</label>
           </div>
           <div class="checkbox mb-3">
@@ -54,7 +55,7 @@
           </div>
         </div>
         <div class="form-floating mb-3">
-            <button class="w-100 btn btn-lg btn-secondary" type="submit">Sign In</button>
+            <button class="w-100 btn btn-lg btn-secondary" type="button" onclick="">Sign In</button>
         </div>
             <hr class="my-4">
           <small class="text-muted">By clicking Sign in, you agree to the terms of use.</small>
