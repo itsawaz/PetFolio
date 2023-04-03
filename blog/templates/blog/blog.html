@@ -15,8 +15,8 @@
            <div class="col-md-3">
                <div class="card">
                    <div class="card-body">
-                       <div class="h5">@Awaz</div>
-                       <div class="h7 text-muted">Pet : Fish</div>
+                       <div class="h5">{{user.username}}</div>
+                       <div class="h7 text-muted">Pet : {{user.pet_type}} </div>
                        <div class="h7"> Owns two stupid fish.
                        </div>
                    </div>
@@ -48,7 +48,7 @@
                               </div>
                               -->
                               <div class="ml-2">
-                                  <div class="h5 m-0">{{post.name}}</div>
+                                  <div class="h5 m-0">{{post.author}}</div>
                                   <div class="h7 text-muted">{{post.pet_type}}</div>
                               </div>
                           </div>
@@ -69,7 +69,7 @@
 
                   </div>
                   <div class="card-body">
-                      <div class="text-muted h7 mb-2"> <i class="bi bi-clock-history"></i> {{post.date}} </div>
+                      <div class="text-muted h7 mb-2"> <i class="bi bi-clock-history"></i> {{post.date_posted}} </div>
                       <a class="card-link" href="">
                           <h5 class="card-title">{{post.title}}</h5>
                       </a>
@@ -95,45 +95,52 @@
 </div>
 
 <div class="col-md-3">
-  <div class="card" style="width: 350px; height: 400px;">
+  <div class="card">
     <div class="container">
       <div class="row">
 
-
-
+          <pre></pre>
       <h4>Create Post</h4>
+        {% csrf_token %}
+      <form  method="POST"  id="post-form">
 
-      <form action="" method="POST"  style="width: 350px; height: 400px;" id="post-form">
-            {% csrf_token %}
           <div class="form-group">
-              <label for="title">Title <span class="require">*</span></label>
+              <label >Title<span class="require"> *</span></label>
               <input type="text" class="form-control" name="title" required/>
           </div>
 
           <div class="form-group">
-              <label for="description">Description<span class="require">*</span></label>
+              <label >Pet type<span class="require"> *</span></label>
+              <input type="text" class="form-control" name="pet_type" required/>
+          </div>
+
+
+          <div class="form-group">
+              <label>Description<span class="require"> *</span></label>
               <textarea rows="5" class="form-control" name="description" required></textarea>
+
+          <div class="form-group">
+
+          </div>
+              {% csrf_token %}
               {% if messages %}
             {% for message in messages %}
-               <div class="alert alert-danger alert-dismissible fade show" role="alert">
+               <div class="alert alert-success alert-dismissible fade show" role="alert">
             {{ message }}
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
             {% endfor %}
           {% endif %}
-          </div>
 
-          <div class="form-group">
-              <p><span class="require">*</span>  required fields</p>
-          </div>
+              <div class="form-group d-flex">
+          <button type="submit" class="btn btn-primary" style="margin-right: 50px; margin-left: 50px; ">
+            Create
+          </button>
+          <button class="btn btn-secondary" type="button" onclick="clearForm()" style="margin-left: 10px;">
+            Clear
+          </button>
+        </div>
 
-          <div class="form-group">
-              <button type="submit"  class="btn btn-primary">
-                  Create
-              </button>
-              <button class="btn btn-secondary" type="button" onclick="clearForm()" >
-                  Clear
-              </button>
           </div>
 
       </form>
@@ -143,6 +150,7 @@
 </div>
 </div>
 </div>
+
            <script>
 function clearForm() {
     document.getElementById("post-form").reset();
