@@ -15,53 +15,6 @@
  * Custom translucent site header
  */
 
-.site-header {
-  background-color: rgba(0, 0, 0, .85);
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
-  backdrop-filter: saturate(180%) blur(20px);
-}
-.site-header a {
-  color: #8e8e8e;
-  transition: color .15s ease-in-out;
-}
-.site-header a:hover {
-  color: #fff;
-  text-decoration: none;
-}
-
-/*
- * Dummy devices (replace them with your own or something else entirely!)
- */
-
-.product-device {
-  position: absolute;
-  right: 10%;
-  bottom: -30%;
-  width: 300px;
-  height: 540px;
-  background-color: #333;
-  border-radius: 21px;
-  transform: rotate(30deg);
-}
-
-.product-device::before {
-  position: absolute;
-  top: 10%;
-  right: 10px;
-  bottom: 10%;
-  left: 10px;
-  content: "";
-  background-color: rgba(255, 255, 255, .1);
-  border-radius: 5px;
-}
-
-.product-device-2 {
-  top: -25%;
-  right: auto;
-  bottom: 0;
-  left: 5%;
-  background-color: #e5e5e5;
-}
 
 
 /*
@@ -149,10 +102,39 @@
   color: white;
   z-index: 1;
 }
+.zoom-box {
+  transition: all 0.2s ease-in-out;
+  transform-origin: center center;
+}
+
+.zoom-in {
+  transform: scale(1.2);
+}
+
+.zoom-out {
+  transform: scale(1);
+}
 
     </style>
 
+<script>
+let prevScrollPos = window.pageYOffset;
 
+window.onscroll = function() {
+  let currentScrollPos = window.pageYOffset;
+
+  if (prevScrollPos > currentScrollPos) {
+    document.getElementById("zoom-box").classList.remove("zoom-in");
+    document.getElementById("zoom-box").classList.add("zoom-out");
+  } else {
+    document.getElementById("zoom-box").classList.remove("zoom-out");
+    document.getElementById("zoom-box").classList.add("zoom-in");
+  }
+
+  prevScrollPos = currentScrollPos;
+}
+
+</script>
 
     <!-- Required meta tags -->
    <meta charset="utf-8">
@@ -183,10 +165,12 @@
 
     <div class="container">
       <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-    <a class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-      <img src="https://cdn-icons-png.flaticon.com/512/5783/5783311.png" width="70" height="70">
-      <a href="/blog" class="nav-link px-0 link-primary"><h1>Petfolio</h1></a>
-    </a>
+    <div class="nav align-items-center">
+        <a href="/blog" >
+        <img src="https://cdn-icons-png.flaticon.com/512/5783/5783311.png" width="70" height="70">
+        <a href="/blog" class="nav-link  link-primary"><h1>Petfolio</h1></a>
+        </a>
+    </div>
 
 
      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
@@ -196,14 +180,14 @@
        <li><a href="/doctor" class="nav-link px-2 link-dark"><h4>Doctor</h4></a></li>
        <li><a href="/about" class="nav-link px-2 link-dark"><h4>About</h4></a></li>
      </ul>
+        <div>
+       <button type="button" onclick="window.location.href='{% url 'login-home' %}'" class="btn btn-outline-primary me-2">Login</button>
+       <button type="button" onclick="window.location.href='{% url 'signup-home' %}'" class="btn btn-primary">Sign-up</button>
+        </div>
 
-  <!--   <div class="col-md-3 text-end">
-       <button type="button" class="btn btn-outline-primary me-2">Login</button>
-       <button type="button" class="btn btn-primary">Sign-up</button>
-     </div>
-     -->
    </header>
  </div>
+
 
 
 
@@ -215,17 +199,20 @@
 
 <main>
   <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light " style="border-radius: 21px 21px 21px 21px">
-    <div class="col-md-5 p-lg-5 mx-auto my-5">
+
+      <div class="bg-dark shadow-sm mx-auto text-white zoom-box" id="zoom-box" style="width: 80%; height: 300px; border-radius: 23px 23px 23px 23px;">
+      <div class="col-md-5 p-lg-5 mx-auto my-5">
+
       <h1 class="display-4 fw-normal">Pet Store</h1>
       <p class="lead fw-normal">Shop the best pet food for your furry friends from your home!</p>
       <a class="btn btn-outline-secondary" href="https://www.amazon.in/gp/browse.html?node=2454181031&ref_=nav_em_sbc_hk_pets_all_0_2_12_19">Shop Now!</a>
+   </div>
+
+      </div>
     </div>
-    <div class="product-device shadow-sm d-none d-md-block"></div>
-    <div class="product-device product-device-2 product-device-3 shadow-sm d-none d-md-block"></div>
-  </div>
 
   <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
-    <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden"  style="border-radius: 21px 21px 21px 21px">
+    <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden" style="border-radius: 21px 21px 21px 21px">
       <div class="my-3 py-3">
         <h2 class="display-5">Dog food & treats</h2>
         <p class="lead">Starting ₹149</p>
@@ -248,13 +235,13 @@
     </div>
   </div>
        <!-- position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center  -->
-       <div class="bg-dark position-relative md-5 m-md-3 text-center overflow-hidden text-white"  style="border-radius: 21px 21px 21px 21px">
+       <div class="bg-light position-relative md-5 m-md-3 text-center overflow-hidden text-dark"  style="border-radius: 21px 21px 21px 21px">
       <div class="my-3 py-3">
         <h2 class="display-5">Bestselling Aquatic supplies</h2>
         <p class="lead">50,000 results for Fish & Aquatics</p>
           <a class="btn btn-outline-secondary" href="https://www.amazon.in/b/ref=Halo_Pets_3?pf_rd_r=1WJBQ5PA4D8TJWYCQFG0&pf_rd_p=5044793c-5489-4924-963c-a2f8832f41c4&pf_rd_m=A1VBAL9TL5WCBF&pf_rd_s=merchandised-search-1&pf_rd_t=&pf_rd_i=2454181031&ie=UTF8&node=4771339031">Buy Now</a>
       </div>
-      <div class="bg-body shadow-sm mx-auto" style="width: 40%; height: 45%; border-radius: 21px 21px 0 0;">
+      <div class="bg-body shadow-sm mx-auto" style="width: 38%; border-radius: 21px 21px 0 0;">
           <img src="https://images.unsplash.com/photo-1653567182754-4889e7fdef35?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"  style="width:100%; height: 300px; border-radius: 21px 21px 0px 0px;"/></div>
       </div>
 

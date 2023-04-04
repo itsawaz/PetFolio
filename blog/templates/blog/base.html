@@ -35,27 +35,29 @@
 
     <div class="container">
       <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-    <a class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-      <img src="https://cdn-icons-png.flaticon.com/512/5783/5783311.png" width="70" height="70">
-      <a href="/blog" class="nav-link px-0 link-primary"><h1>Petfolio</h1></a>
-    </a>
+    <div class="nav align-items-center">
+        <a href="/blog" >
+        <img src="https://cdn-icons-png.flaticon.com/512/5783/5783311.png" width="70" height="70">
+        <a href="/blog" class="nav-link  link-primary"><h1>Petfolio</h1></a>
+        </a>
+    </div>
 
 
      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-       <li><a href="/blog" class="nav-link px-2 link-primary"><h4>Blog</h4></a></li>
+       <li><a href="/blog" class="nav-link px-2 link-selected"><h4>Blog</h4></a></li>
        <li><a href="/health" class="nav-link px-2 link-dark"><h4>Health</h4></a></li>
        <li><a href="/shop" class="nav-link px-2 link-dark"><h4>Shop</h4></a></li>
        <li><a href="/doctor" class="nav-link px-2 link-dark"><h4>Doctor</h4></a></li>
        <li><a href="/about" class="nav-link px-2 link-dark"><h4>About</h4></a></li>
      </ul>
+        <div>
+       <button type="button" onclick="window.location.href='{% url 'login-home' %}'" class="btn btn-outline-primary me-2">Login</button>
+       <button type="button" onclick="window.location.href='{% url 'signup-home' %}'" class="btn btn-primary">Sign-up</button>
+        </div>
 
-  <!--   <div class="col-md-3 text-end">
-       <button type="button" class="btn btn-outline-primary me-2">Login</button>
-       <button type="button" class="btn btn-primary">Sign-up</button>
-     </div>
-     -->
    </header>
  </div>
+
 
 
 
