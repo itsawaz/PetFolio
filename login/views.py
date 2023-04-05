@@ -7,9 +7,11 @@ from django.shortcuts import render, redirect
 
 
 def login_view(request):
+    user1=User()
     if request.method == 'POST':
         email_username = request.POST['email_username']
         password = request.POST['password']
+        print(email_username,password)
         user = authenticate(request, username=email_username, password=password)
        # if User.objects.filter(username=email_username).exists() or User.objects.filter(email=email_username).exists():
        #     if User.objects.filter(password=password).exists():

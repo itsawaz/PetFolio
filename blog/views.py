@@ -20,6 +20,8 @@ def blog(request):
 @login_required
 def post(request):
     if request.method == 'POST':
+
+
         title = request.POST['title']
         description = request.POST['description']
         author = request.user
@@ -28,4 +30,3 @@ def post(request):
         post.save()
         messages.success(request, f'Posted Successfully')
         return redirect('blog-home')
-
