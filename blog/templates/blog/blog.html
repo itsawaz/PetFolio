@@ -124,17 +124,30 @@
 
           </div>
               {% csrf_token %}
-              {% if messages %}
-            {% for message in messages %}
-               <div class="alert alert-success alert-dismissible fade show" role="alert">
-            {{ message }}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-            {% endfor %}
-          {% endif %}
+             {% if messages %}
+          {% for message in messages %}
+            {% if message.tags == 'success' %}
+              <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+            {% elif message.tags == 'error' %}
+              <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+            {% else %}
+              <div class="alert alert-info alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+
 
               <div class="form-group d-flex">
-          <button type="submit" class="btn btn-primary" style="margin-right: 50px; margin-left: 50px; ">
+          <button type="submit" class="btn btn-primary" style="margin-right: 50px; margin-left: 50px; " name="POST">
             Create
           </button>
           <button class="btn btn-secondary" type="button" onclick="clearForm()" style="margin-left: 10px;">

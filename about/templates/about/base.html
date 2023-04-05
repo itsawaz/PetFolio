@@ -38,10 +38,25 @@
        <li><a href="/doctor" class="nav-link px-2 link-dark"><h4>Doctor</h4></a></li>
        <li><a href="/about" class="nav-link px-2 link-selected"><h4>About</h4></a></li>
      </ul>
-        <div>
+
+
+                  <div>
+                      {% if user.is_authenticated %}
+                        <form method="POST">
+                    {% csrf_token %}
+                    <button class="btn btn-outline-primary me-2" type="submit" name="logout">Logout</button>
+                        </form>
+
+                      {% else %}
+
        <button type="button" onclick="window.location.href='{% url 'login-home' %}'" class="btn btn-outline-primary me-2">Login</button>
        <button type="button" onclick="window.location.href='{% url 'signup-home' %}'" class="btn btn-primary">Sign-up</button>
-        </div>
+
+                      {% endif %}
+
+                  </div>
+
+
 
    </header>
  </div>

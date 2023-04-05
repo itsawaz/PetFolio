@@ -54,7 +54,10 @@
 
                   <div>
                       {% if user.is_authenticated %}
-        <button type="button" onclick="window.location.href='{% url 'login-home' %}'" class="btn btn-outline-primary me-2">Log Out</button>
+                        <form  method="POST">
+                    {% csrf_token %}
+                    <button onclick="window.location.href='{% url 'login-home' %}'" class="btn btn-outline-primary me-2" type="submit" name="logout">Logout</button>
+                        </form>
 
                       {% else %}
 
