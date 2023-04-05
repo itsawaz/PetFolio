@@ -1,13 +1,12 @@
 # Create your views here.
-from signup.models import User
+from signup.models import Peto
 from django.contrib import messages
 from django.contrib.auth import authenticate, login
-
 from django.shortcuts import render, redirect
 
 
 def login_view(request):
-    user1=User()
+    user1=Peto()
     if request.method == 'POST':
         email_username = request.POST['email_username']
         password = request.POST['password']

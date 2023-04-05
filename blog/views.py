@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from blog.models import Post
-from signup.models import User
+from signup.models import Peto
 
 
 def blog(request):

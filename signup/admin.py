@@ -1,8 +1,8 @@
 from django.contrib import admin
-from signup.models import User
+from signup.models import Peto
 
 
 # Register your models here.
 
 
-admin.site.register(User)
+admin.site.register(Peto)
