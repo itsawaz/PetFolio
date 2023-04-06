@@ -32,8 +32,8 @@ The following people contributed to the development of Petfolio:
 
 Neeraj Singh (@itsawaz)
 
-License
-Petfolio is licensed under the MIT License. See LICENSE.md for more information.
+
+
 
 Contact
 If you have any questions or concerns about Petfolio, please contact us at helloneerajkumarsingh@example.com.
