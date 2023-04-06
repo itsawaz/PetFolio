@@ -35,6 +35,7 @@ def post(request):
 
 
 def log_out(request):
-    messages.error(request, f'Account logged out!')
     logout(request)
+    messages.error(request, f'Account logged out!')
+    return redirect('login-home')
 
