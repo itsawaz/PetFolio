@@ -12,9 +12,7 @@
             align-items: center;
             height: 50vh;
         }
-        h3{
-            text-align: center;
-        }
+
       .flash{
 	background: linear-gradient(-45deg, #020024, #00d4ff, #090979);
 	background-size: 400% 400%;
@@ -312,66 +310,84 @@ window.onscroll = function() {
   <div >
     <div>
       <form>
-        <div class="form-group">
-            <br>
-            <br>
-          <label for="formControlRange"><h3>How would you rate your pet's appetite and hydration level?</h3></label>
-          <input type="range" class="form-control-range" min="1" max="100" id="form1">
-            <br>
-            <br>
-            <label for="formControlRange"><h3>How would you rate your pet's appetite and hydration level?</h3></label>
-          <input type="range" class="form-control-range" min="1" max="100" id="form2">
-               <br>
-            <br>
-          <label for="formControlRange"><h3>How would you rate your pet's appetite and hydration level?</h3></label>
-          <input type="range" class="form-control-range" min="1" max="100" id="form3">
-            <br>
-            <br>
-            <label for="formControlRange"><h3>How would you rate your pet's appetite and hydration level?</h3></label>
-          <input type="range" class="form-control-range" min="1" max="100" id="form4">   <br>
-            <br>
-          <label for="formControlRange"><h3>How would you rate your pet's appetite and hydration level?</h3></label>
-          <input type="range" class="form-control-range" min="1" max="100" id="form5">
-            <br>
-            <br>
-            <label for="formControlRange"><h3>How would you rate your pet's appetite and hydration level?</h3></label>
-          <input type="range" class="form-control-range" min="1" max="100" id="form6">   <br>
-            <br>
-          <label for="formControlRange"><h3>How would you rate your pet's appetite and hydration level?</h3></label>
-          <input type="range" class="form-control-range" min="1" max="100" id="form7">
-            <br>
-            <br>
-            <label for="formControlRange"><h3>How would you rate your pet's appetite and hydration level?</h3></label>
-          <input type="range" class="form-control-range" min="1" max="100" id="form8">   <br>
-            <br>
-          <label for="formControlRange"><h3>How would you rate your pet's appetite and hydration level?</h3></label>
-          <input type="range" class="form-control-range" min="1" max="100" id="form9">
-            <br>
-            <br>
-            <label for="formControlRange"><h3>How would you rate your pet's appetite and hydration level?</h3></label>
-          <input type="range" class="form-control-range" min="1" max="100" id="form10">   <br>
-            <br>
-          <label for="formControlRange"><h3>How would you rate your pet's appetite and hydration level?</h3></label>
-          <input type="range" class="form-control-range" min="1" max="100" id="form11">
-            <br>
-            <br>
-            <label for="formControlRange"><h3>How would you rate your pet's appetite and hydration level?</h3></label>
-          <input type="range" class="form-control-range" min="1" max="100" id="form12">   <br>
-            <br>
-          <label for="formControlRange"><h3>How would you rate your pet's appetite and hydration level?</h3></label>
-          <input type="range" class="form-control-range" min="1" max="100" id="form13">
-            <br>
-            <br>
-            <label for="formControlRange"><h3>How would you rate your pet's appetite and hydration level?</h3></label>
-          <input type="range" class="form-control-range" min="1" max="100" id="form14">
-            <br>
-            <br>
-            <label for="formControlRange"><h3>How would you rate your pet's appetite and hydration level?</h3></label>
-          <input type="range" class="form-control-range" min="1" max="100" id="form15">
-             <br>
-            <br>
-            <button type="button" id="submitBtn" class="btn btn-primary">Submit</button>
-        </div>
+          <div class="form-group">
+              <br>
+              <br>
+              <label for="formControlRange"><h3>How would you rate your pet's overall energy level and vitality?</h3></label>
+              <input type="range" class="form-control-range" min="1" max="100" id="form1" value=0 oninput="outputUpdate1(this.value)">
+              <output style="text-align:center;" id="op1">0</output>
+              <br>
+              <br>
+              <label for="formControlRange"><h3>On a scale of 1 to 100, how would you rate your pet's appetite and eating habits?</h3></label>
+              <input type="range" class="form-control-range" min="1" max="100" id="form2" value=0 oninput="outputUpdate2(this.value)">
+              <output style="text-align:center;" id="op2">0</output>
+              <br>
+              <br>
+              <label for="formControlRange"><h3>Does your pet maintain a healthy weight? Please rate on a scale of 1 to 100. </h3></label>
+              <input type="range" class="form-control-range" min="1" max="100" id="form3" value=0 oninput="outputUpdate3(this.value)">
+              <output style="text-align:center;" id="op3">0</output>
+              <br>
+              <br>
+              <label for="formControlRange"><h3>How would you rate the condition of your pet's coat and skin? </h3></label>
+              <input type="range" class="form-control-range" min="1" max="100" id="form4" value=0 oninput="outputUpdate4(this.value)">
+              <output style="text-align:center;" id="op4">0</output>
+              <br>
+              <br>
+              <label for="formControlRange"><h3>On a scale of 1 to 100, how well does your pet handle physical activity and exercise?</h3></label>
+              <input type="range" class="form-control-range" min="1" max="100" id="form5" value=0 oninput="outputUpdate5(this.value)">
+              <output style="text-align:center;" id="op5">0</output>
+              <br>
+              <br>
+              <label for="formControlRange"><h3>Please rate your pet's dental health on a scale of 1 to 100.  </h3></label>
+              <input type="range" class="form-control-range" min="1" max="100" id="form6" value=0 oninput="outputUpdate6(this.value)">
+              <output style="text-align:center;" id="op6">0</output><br>
+              <br>
+              <label for="formControlRange"><h3>How would you rate your pet's gastrointestinal health and regularity?</h3></label>
+              <input type="range" class="form-control-range" min="1" max="100" id="form7" value=0 oninput="outputUpdate7(this.value)">
+              <output style="text-align:center;" id="op7">0</output>
+              <br>
+              <br>
+              <label for="formControlRange"><h3>On a scale of 1 to 100, how would you rate your pet's respiratory health?</h3></label>
+              <input type="range" class="form-control-range" min="1" max="100" id="form8" value=0 oninput="outputUpdate8(this.value)">
+              <output style="text-align:center;" id="op8">0</output><br>
+              <br>
+              <label for="formControlRange"><h3>Does your pet have any chronic medical conditions? Please rate their severity on a scale of 1 to 100.</h3></label>
+              <input type="range" class="form-control-range" min="1" max="100" id="form9" value=0 oninput="outputUpdate9(this.value)">
+              <output style="text-align:center;" id="op9">0</output>
+              <br>
+              <br>
+              <label for="formControlRange"><h3>How would you rate your pet's musculoskeletal health and mobility? (</h3></label>
+              <input type="range" class="form-control-range" min="1" max="100" id="form10" value=0 oninput="outputUpdate10(this.value)">
+              <output style="text-align:center;" id="op10">0</output><br>
+              <br>
+              <label for="formControlRange"><h3>On a scale of 1 to 100, how well does your pet handle stress and adapt to changes in their environment? </h3></label>
+              <input type="range" class="form-control-range" min="1" max="100" id="form11" value=0 oninput="outputUpdate11(this.value)">
+              <output style="text-align:center;" id="op11">0</output>
+              <br>
+              <br>
+              <label for="formControlRange"><h3>On a scale of 1 to 100 , how well does your pet handle stress and adapt to changes in their environment?</h3></label>
+              <input type="range" class="form-control-range" min="1" max="100" id="form12" value=0 oninput="outputUpdate12(this.value)">
+              <output style="text-align:center;" id="op12">0</output><br>
+              <br>
+              <label for="formControlRange"><h3>How would you rate your pet's mental and emotional well-being?</h3></label>
+              <input type="range" class="form-control-range" min="1" max="100" id="form13" value=0 oninput="outputUpdate13(this.value)">
+              <output style="text-align:center;" id="op13">0</output>
+              <br>
+              <br>
+              <label for="formControlRange"><h3>On a scale of 1 to 100, how would you rate your pet's vision and eye health? </h3></label>
+              <input type="range" class="form-control-range" min="1" max="100" id="form14" value=0 oninput="outputUpdate14(this.value)">
+              <output style="text-align:center;" id="op14">0</output>
+              <br>
+              <br>
+              <label for="formControlRange"><h3>Please rate your pet's overall quality of life on a scale of 1 to 100. </h3></label>
+              <input type="range" class="form-control-range" min="1" max="100" id="form15" value=0 oninput="outputUpdate15(this.value)">
+              <output style="text-align:center;" id="op15">0</output>
+              <br>
+              <br>
+
+              <button type="button" id="submitBtn" class="btn btn-primary" onclick="average()">Submit</button>
+              <output style="text-align:center;" id="avg">0</output>
+          </div>
       </form>
     </div>
   </div>
@@ -431,8 +447,62 @@ window.onscroll = function() {
      <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
     <script>
+        var avg=0
+        function outputUpdate1(value) {
+            document.getElementById("op1").textContent = value
+        }
+        function outputUpdate2(value) {
+            document.getElementById("op2").textContent = value
+        }
+        function outputUpdate3(value) {
+            document.getElementById("op3").textContent = value
+        }
+        function outputUpdate4(value) {
+            document.getElementById("op4").textContent = value
+        }
+        function outputUpdate5(value) {
+            document.getElementById("op5").textContent = value
+        }
+        function outputUpdate6(value) {
+            document.getElementById("op6").textContent = value
+        }
+        function outputUpdate7(value) {
+            document.getElementById("op7").textContent = value
+        }
+        function outputUpdate8(value) {
+            document.getElementById("op8").textContent = value
+        }
+        function outputUpdate9(value) {
+            document.getElementById("op9").textContent = value
+        }
+        function outputUpdate10(value) {
+            document.getElementById("op10").textContent = value
 
+        }
+        function outputUpdate11(value) {
+            document.getElementById("op11").textContent = value
+ 
+        }
+        function outputUpdate12(value) {
+            document.getElementById("op12").textContent = value
+          
+        }
+        function outputUpdate13(value) {
+            document.getElementById("op13").textContent = value
+     
+        }
+        function outputUpdate14(value) {
+            document.getElementById("op14").textContent = value
+     
+        }
+        function outputUpdate15(value) {
+            document.getElementById("op15").textContent = value
 
+        }
+        function average() {
+            avg = parseInt(document.getElementById("op1").textContent) + parseInt(document.getElementById("op2").textContent) + parseInt(document.getElementById("op3").textContent) + parseInt(document.getElementById("op4").textContent) + parseInt(document.getElementById("op5").textContent) + parseInt(document.getElementById("op6").textContent) + parseInt(document.getElementById("op7").textContent) + parseInt(document.getElementById("op8").textContent) + parseInt(document.getElementById("op9").textContent) + parseInt(document.getElementById("op10").textContent) + parseInt(document.getElementById("op11").textContent) + parseInt(document.getElementById("op12").textContent) + parseInt(document.getElementById("op13").textContent) + parseInt(document.getElementById("op14").textContent) + parseInt(document.getElementById("op15").textContent)
+            document.getElementById("avg").textContent=(avg/15)
+        }
     </script>
 
   </body>
