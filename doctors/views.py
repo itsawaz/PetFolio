@@ -13,12 +13,12 @@ def doctor_list(request):
         log_out(request)
         return redirect('login-home')
     elif request.method == 'POST':
-        vet_name = request.POST.get('vet_name')
-        vet_email = request.POST.get('vet_email')
-        vet_calendly = request.POST.get('vet_calendly')
-        vet_description = request.POST.get('vet_description')
+        name = request.POST.get('vet_name')
+        email = request.POST.get('vet_email')
+        calendly = request.POST.get('vet_calendly')
+        description = request.POST.get('vet_description')
 
-        vet = Vets(vet_name=vet_name, vet_email=vet_email, vet_calendly=vet_calendly, vet_description=vet_description)
+        vet = Vets(vet_name=name, vet_email=email, vet_calendly=calendly, vet_description=description)
         vet.save()
 
         return redirect('doctor-list')
