@@ -4,6 +4,24 @@
 
 
     <style>
+    .flash{
+	background: linear-gradient(-45deg, #020024, #00d4ff, #090979);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
     .card-title {
   text-decoration: none !important;
 }
@@ -268,7 +286,7 @@ window.onscroll = function() {
 <main>
   <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light" style="border-radius: 21px 21px 21px 21px">
 
-      <div class="bg-dark shadow-sm mx-auto zoom-box align-items-center text-light" style="width: 80%; height: 300px;  border-radius: 23px 23px 23px 23px;" href="./doctor-list" >
+      <div class="bg-dark flash shadow-sm mx-auto zoom-box align-items-center text-light" style="width: 80%; height: 300px;  border-radius: 23px 23px 23px 23px;" href="./doctor-list" >
 
                   <div class="col-md-5 p-lg-5 mx-auto my-5 align-items-center" >
 
@@ -304,7 +322,7 @@ window.onscroll = function() {
   </div>
       <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light" style="border-radius: 21px 21px 21px 21px">
 
-      <div class="bg-dark shadow-sm mx-auto zoom-box align-items-center text-light" style="width: 80%; height: 300px;  border-radius: 23px 23px 23px 23px;">
+      <div class=" flash bg-dark shadow-sm mx-auto zoom-box align-items-center text-light" style="width: 80%; height: 300px;  border-radius: 23px 23px 23px 23px;">
 
                   <div class="col-md-5 p-lg-5 mx-auto my-5 align-items-center">
 
