@@ -20,8 +20,7 @@ def doctor_list(request):
 
         vet = Vets(vet_name=name, vet_email=email, vet_calendly=calendly, vet_description=description)
         vet.save()
-        context = {'vet_list': Vets.objects.all()}
+
         return redirect('doctor-list')
-    vets = Vets.objects.all()
-    context = {'vet_list': vets}
-    return render(request, 'doctor/doctor_list.html')
+    context = {'vet_list': Vets.objects.all().order_by('vet_name')}
+    return render(request, 'doctor/doctor_list.html', context)

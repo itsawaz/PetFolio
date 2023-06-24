@@ -4,6 +4,17 @@
 
 
     <style>
+
+        /* Custom CSS to center content */
+        .center-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50vh;
+        }
+        h3{
+            text-align: center;
+        }
       .flash{
 	background: linear-gradient(-45deg, #020024, #00d4ff, #090979);
 	background-size: 400% 400%;
@@ -247,9 +258,9 @@ window.onscroll = function() {
 
      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
        <li><a href="/blog" class="nav-link px-2 link-dark"><h4>Blog</h4></a></li>
-       <li><a href="/health" class="nav-link px-2 link-dark"><h4>Health</h4></a></li>
+       <li><a href="/health" class="nav-link px-2 link-selected"><h4>Health</h4></a></li>
        <li><a href="/shop" class="nav-link px-2 link-dark"><h4>Shop</h4></a></li>
-       <li><a href="/doctor" class="nav-link px-2 link-selected"><h4>Doctor</h4></a></li>
+       <li><a href="/doctor" class="nav-link px-2 link-dark"><h4>Doctor</h4></a></li>
        <li><a href="/about" class="nav-link px-2 link-dark"><h4>About</h4></a></li>
      </ul>
 
@@ -278,70 +289,93 @@ window.onscroll = function() {
 
 
 
-  <div class="content">
+  <div class="content" >
       {%block content%}
 
 
 
 <main>
-    <!-- doctor_list.html -->
-
-
-  {% for vet in vet_list%}
-  <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light" style="border-radius: 21px 21px 21px 21px">
-    <div class="bg-dark flph shadow-sm mx-auto zoom-box align-items-center text-light" style="width: 80%; height: 300px;  border-radius: 23px 23px 23px 23px;">
-      <div class="col-md-5 p-lg-5 mx-auto my-5 align-items-center">
-        <h1 class="display-4 fw-normal">{{ vet.vet_name }}</h1>
-        <p class="lead fw-normal">{{ vet.vet_description}}</p>
-          <a  class="lead fw-normal btn-outline-primary" onclick="location.href='mailto:{{vet.vet_email}}'">{{ vet.vet_email}}</p>
-        <a class="btn btn-primary btn-outline-primary" href={{vet.vet_calendly}}>Book an Appointment!</a>
-      </div>
-    </div>
-  </div>
-  <br>
-  <br>
-  {% endfor %}
-
-
-
   <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light" style="border-radius: 21px 21px 21px 21px">
 
-     <form method="POST"  name="vet_reg" >
-         {% csrf_token %}
-         <h1><b>Are you a Vet?</b></h1><br>
+      <div class="bg-dark flash shadow-sm mx-auto zoom-box align-items-center text-light" style="width: 80%; height: 300px;  border-radius: 23px 23px 23px 23px;" href="./doctor-list" >
 
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="vet_name"><b>Name</b></label>
-      <input type="text" class="form-control" name="vet_name" id="vet_name" placeholder="Awaz" required>
-    </div>
-    <div class="form-group col-md-6">
-      <label for="vet_email"><b>Email</b></label>
-      <input type="email" class="form-control" name="vet_email" id="vet_email" placeholder="awaz@gmail.com" required>
-    </div>
+                  <div class="col-md-5 p-lg-5 mx-auto my-5 align-items-center" >
+                      <h1 class="display-6 fw-normal">Pet Score! </h1>
+                    <p class="lead fw-normal">Take a survey to know your Score as a pet owner!</p>
+                </div>
       </div>
-    <div class="form-group">
-      <label for="cal_link"><b>Calendly or Your Website Link</b></label>
-      <input type="text" class="form-control" name="vet_calendly" id="vet_calendly" placeholder="https://calendly.com/itsawaz/" required>
+
+</div>
+
+
+    <div class="container">
+  <div >
+    <div>
+      <form>
+        <div class="form-group">
+            <br>
+            <br>
+          <label for="formControlRange"><h3>How would you rate your pet's appetite and hydration level?</h3></label>
+          <input type="range" class="form-control-range" min="1" max="100" id="form1">
+            <br>
+            <br>
+            <label for="formControlRange"><h3>How would you rate your pet's appetite and hydration level?</h3></label>
+          <input type="range" class="form-control-range" min="1" max="100" id="form2">
+               <br>
+            <br>
+          <label for="formControlRange"><h3>How would you rate your pet's appetite and hydration level?</h3></label>
+          <input type="range" class="form-control-range" min="1" max="100" id="form3">
+            <br>
+            <br>
+            <label for="formControlRange"><h3>How would you rate your pet's appetite and hydration level?</h3></label>
+          <input type="range" class="form-control-range" min="1" max="100" id="form4">   <br>
+            <br>
+          <label for="formControlRange"><h3>How would you rate your pet's appetite and hydration level?</h3></label>
+          <input type="range" class="form-control-range" min="1" max="100" id="form5">
+            <br>
+            <br>
+            <label for="formControlRange"><h3>How would you rate your pet's appetite and hydration level?</h3></label>
+          <input type="range" class="form-control-range" min="1" max="100" id="form6">   <br>
+            <br>
+          <label for="formControlRange"><h3>How would you rate your pet's appetite and hydration level?</h3></label>
+          <input type="range" class="form-control-range" min="1" max="100" id="form7">
+            <br>
+            <br>
+            <label for="formControlRange"><h3>How would you rate your pet's appetite and hydration level?</h3></label>
+          <input type="range" class="form-control-range" min="1" max="100" id="form8">   <br>
+            <br>
+          <label for="formControlRange"><h3>How would you rate your pet's appetite and hydration level?</h3></label>
+          <input type="range" class="form-control-range" min="1" max="100" id="form9">
+            <br>
+            <br>
+            <label for="formControlRange"><h3>How would you rate your pet's appetite and hydration level?</h3></label>
+          <input type="range" class="form-control-range" min="1" max="100" id="form10">   <br>
+            <br>
+          <label for="formControlRange"><h3>How would you rate your pet's appetite and hydration level?</h3></label>
+          <input type="range" class="form-control-range" min="1" max="100" id="form11">
+            <br>
+            <br>
+            <label for="formControlRange"><h3>How would you rate your pet's appetite and hydration level?</h3></label>
+          <input type="range" class="form-control-range" min="1" max="100" id="form12">   <br>
+            <br>
+          <label for="formControlRange"><h3>How would you rate your pet's appetite and hydration level?</h3></label>
+          <input type="range" class="form-control-range" min="1" max="100" id="form13">
+            <br>
+            <br>
+            <label for="formControlRange"><h3>How would you rate your pet's appetite and hydration level?</h3></label>
+          <input type="range" class="form-control-range" min="1" max="100" id="form14">
+            <br>
+            <br>
+            <label for="formControlRange"><h3>How would you rate your pet's appetite and hydration level?</h3></label>
+          <input type="range" class="form-control-range" min="1" max="100" id="form15">
+             <br>
+            <br>
+            <button type="button" id="submitBtn" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
     </div>
-  <div class="form-group">
-    <label for="vet_description"><b>Description</b></label>
-    <input type="text" class="form-control"  name="vet_description" id="vet_description" placeholder="A short description about me" required>
   </div>
-
-
-  <button type="submit" class="btn btn-primary" name="Post">Submit</button>
-    </form>
-  </div>
-
-<br>
-<br>
-
-
-</main>
-
-
-
+</div>
 
 
 
@@ -351,7 +385,7 @@ window.onscroll = function() {
 
 
       {%endblock%}
-    </div>
+
 
 
 
@@ -395,6 +429,11 @@ window.onscroll = function() {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
      <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script>
+
+
+    </script>
 
   </body>
 </html>

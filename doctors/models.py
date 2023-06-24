@@ -5,7 +5,7 @@ from django.db import models
 class Vets(models.Model):
     vet_name = models.CharField(max_length=20)
     vet_calendly = models.CharField(max_length=200)
-    vet_description = models.CharField(max_length=20000)
+    vet_description = models.CharField(max_length=100)
     vet_email = models.EmailField()
 
     def save(self, *args, **kwargs):
