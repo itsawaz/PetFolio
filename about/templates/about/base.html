@@ -67,13 +67,13 @@
                       {% if user.is_authenticated %}
                         <form method="POST">
                     {% csrf_token %}
-                    <button class="btn btn-outline-primary me-2" type="submit" name="logout">Logout</button>
+                    <button class="btn btn-outline-light me-2" type="submit" name="logout">Logout</button>
                         </form>
 
                       {% else %}
 
-       <button type="button" onclick="window.location.href='{% url 'login-home' %}'" class="btn btn-outline-primary me-2">Login</button>
-       <button type="button" onclick="window.location.href='{% url 'signup-home' %}'" class="btn btn-primary">Sign-up</button>
+       <button type="button" onclick="window.location.href='{% url 'login-home' %}'" class="btn btn-outline-light me-2">Login</button>
+       <button type="button" onclick="window.location.href='{% url 'signup-home' %}'" class="btn btn-light">Sign-up</button>
 
                       {% endif %}
 

@@ -1,9 +1,8 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
 
-
-    <style>
+<head>
+  <style>
 
         /* Custom CSS to center content */
         .center-content {
@@ -31,6 +30,29 @@
 		background-position: 0% 50%;
 	}
 }
+
+.op {
+  background: linear-gradient(-45deg, #020024, #00d4ff, #090979);
+  -webkit-background-clip: text;
+   background-clip: text;
+   text-fill-color: transparent;
+   background-size: 500% auto;
+  -webkit-text-fill-color: transparent;
+  animation: gradientAnimation 5s linear infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
     .card-title {
   text-decoration: none !important;
 }
@@ -216,6 +238,9 @@ window.onscroll = function() {
 }
 
 </script>
+    <title>Health</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
+    <link rel="stylesheet" id="picostrap-styles-css" href="https://cdn.livecanvas.com/media/css/library/bundle.css" media="all">
 
     <!-- Required meta tags -->
    <meta charset="utf-8">
@@ -224,24 +249,15 @@ window.onscroll = function() {
    <!-- Bootstrap CSS -->
 
        <!-- Bootstrap core CSS -->
-      <link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
       <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
 
 
 
 
-
-    {% if title  %}
-      <title>PetFolio {{title}}</title>
-    {% else %}
-      <title>PetFolio</title>
-    {%endif%}
+</head>
 
 
-  </head>
-  <body>
+<body>
 
 
     <div class="container">
@@ -288,22 +304,47 @@ window.onscroll = function() {
 
 
   <div class="content" >
-      {%block content%}
+    <div class="container-fluid pt-5">
+        <div class="row mb-4 mb-lg-5 justify-content-lg-between">
+            <div class="col-3 col-md-1 col-lg-2 d-none d-md-flex align-items-center">
+                <div class="lc-block">
+                    <img class="img-fluid zoom-box" style="width: 200px; height: 200px; object-fit: cover;border-radius: 15px 15px 15px 15px"  src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=394&q=80" alt="Photo by Simone Hutsch">
+                </div><!-- /lc-block -->            </div><!-- /col -->
+            <div class="col-4 col-md-3 col-lg-2 d-flex flex-column justify-content-between">
+                <div class="lc-block">
+                    <img class="img-fluid zoom-box" style="width: 200px; height: 200px; object-fit: cover;border-radius: 15px 15px 15px 15px"  src="https://images.unsplash.com/photo-1606214174585-fe31582dc6ee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80" alt="Photo by Simone Hutsch">
+                </div><!-- /lc-block -->                <div class="lc-block">
+                    <img class="img-fluid zoom-box" style="width: 200px; height: 200px; object-fit: cover;border-radius: 15px 15px 15px 15px"  src="https://images.unsplash.com/photo-1625316708582-7c38734be31d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80" alt="Photo by Meriç Dağlı">
+                </div><!-- /lc-block -->
+            </div><!-- /col -->
+            <div class="col-4 col-md-4 col-lg-3"> <img class="" src="https://images.unsplash.com/photo-1598133894008-61f7fdb8cc3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=388&q=80" style="object-fit:cover;border-radius: 15px 15px 15px 15px" alt="Photo by Simone Hutsch"></div><!-- /col -->
+            <div class="col-4 col-md-3 col-lg-2 d-flex flex-column justify-content-between">
+                <div class="lc-block">
+                    <img class="img-fluid zoom-box" style="width: 200px; height: 200px; object-fit: cover;border-radius: 15px 15px 15px 15px"  src="https://images.unsplash.com/photo-1517849845537-4d257902454a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80" alt="Photo by Simone Hutsch">
+                </div><!-- /lc-block -->
+                <div class="lc-block">
+                    <img class="img-fluid zoom-box" style="width: 200px; height: 200px; object-fit: cover;border-radius: 15px 15px 15px 15px"  src="https://images.unsplash.com/photo-1583512603805-3cc6b41f3edb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Photo by Simone Hutsch">
+                </div><!-- /lc-block -->            </div><!-- /col -->
+            <div class="col-3 col-md-1 col-lg-2 d-none d-md-flex  align-items-center">
+                <div class="lc-block">
+                    <img class="img-fluid zoom-box" style="width: 200px; height: 200px; object-fit: cover;border-radius: 15px 15px 15px 15px" src="https://images.unsplash.com/photo-1629740067905-bd3f515aa739?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=388&q=80" alt="Photo by Simone Hutsch">
+                </div><!-- /lc-block -->            </div><!-- /col -->
+        </div>
 
+<br><br><br>
 
-
-<main>
-  <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light" style="border-radius: 21px 21px 21px 21px">
-
-      <div class="bg-dark flash shadow-sm mx-auto zoom-box align-items-center text-light" style="width: 80%; height: 300px;  border-radius: 23px 23px 23px 23px;" href="./doctor-list" >
-
-                  <div class="col-md-5 p-lg-5 mx-auto my-5 align-items-center" >
-                      <h1 class="display-6 fw-normal">Pet Score! </h1>
-                    <p class="lead fw-normal">Take a survey to know your Score as a pet owner!</p>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="lc-block text-center col-md-8">
+                <div editable="rich">
+                    <h1 class="rfs-25 fw-bold op">Take a survey to know your Score as a pet owner!</h1>
                 </div>
-      </div>
-
-</div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="lc-block text-center col-xxl-6 col-md-8">
+                <div editable="rich">
+                    <p class="lead">
 
 
     <div class="container">
@@ -314,111 +355,121 @@ window.onscroll = function() {
               <br>
               <br>
               <label for="formControlRange"><h3>How would you rate your pet's overall energy level and vitality?</h3></label>
-              <input type="range" class="form-control-range" min="1" max="100" id="form1" value=0 oninput="outputUpdate1(this.value)">
-              <output style="text-align:center;" id="op1">0</output>
+              <input type="range" class="form-control-range" min="0" max="100" id="form1" value=0 oninput="outputUpdate1(this.value)">
+              <output class="op rfs-25 fw-bold" style="text-align:center;" id="op1">0</output>
               <br>
               <br>
               <label for="formControlRange"><h3>On a scale of 1 to 100, how would you rate your pet's appetite and eating habits?</h3></label>
-              <input type="range" class="form-control-range" min="1" max="100" id="form2" value=0 oninput="outputUpdate2(this.value)">
-              <output style="text-align:center;" id="op2">0</output>
+              <input type="range" class="form-control-range" min="0" max="100" id="form2" value=0 oninput="outputUpdate2(this.value)">
+              <output class="op rfs-25 fw-bold" style="text-align:center;" id="op2">0</output>
               <br>
               <br>
               <label for="formControlRange"><h3>Does your pet maintain a healthy weight? Please rate on a scale of 1 to 100. </h3></label>
-              <input type="range" class="form-control-range" min="1" max="100" id="form3" value=0 oninput="outputUpdate3(this.value)">
-              <output style="text-align:center;" id="op3">0</output>
+              <input type="range" class="form-control-range" min="0" max="100" id="form3" value=0 oninput="outputUpdate3(this.value)">
+              <output class="op rfs-25 fw-bold" style="text-align:center;" id="op3">0</output>
               <br>
               <br>
               <label for="formControlRange"><h3>How would you rate the condition of your pet's coat and skin? </h3></label>
-              <input type="range" class="form-control-range" min="1" max="100" id="form4" value=0 oninput="outputUpdate4(this.value)">
-              <output style="text-align:center;" id="op4">0</output>
+              <input type="range" class="form-control-range" min="0" max="100" id="form4" value=0 oninput="outputUpdate4(this.value)">
+              <output class="op rfs-25 fw-bold" style="text-align:center;" id="op4">0</output>
               <br>
               <br>
               <label for="formControlRange"><h3>On a scale of 1 to 100, how well does your pet handle physical activity and exercise?</h3></label>
-              <input type="range" class="form-control-range" min="1" max="100" id="form5" value=0 oninput="outputUpdate5(this.value)">
-              <output style="text-align:center;" id="op5">0</output>
+              <input type="range" class="form-control-range" min="0" max="100" id="form5" value=0 oninput="outputUpdate5(this.value)">
+              <output class="op rfs-25 fw-bold" style="text-align:center;" id="op5">0</output>
               <br>
               <br>
               <label for="formControlRange"><h3>Please rate your pet's dental health on a scale of 1 to 100.  </h3></label>
-              <input type="range" class="form-control-range" min="1" max="100" id="form6" value=0 oninput="outputUpdate6(this.value)">
-              <output style="text-align:center;" id="op6">0</output><br>
+              <input type="range" class="form-control-range" min="0" max="100" id="form6" value=0 oninput="outputUpdate6(this.value)">
+              <output class="op rfs-25 fw-bold" style="text-align:center;" id="op6">0</output><br>
               <br>
               <label for="formControlRange"><h3>How would you rate your pet's gastrointestinal health and regularity?</h3></label>
-              <input type="range" class="form-control-range" min="1" max="100" id="form7" value=0 oninput="outputUpdate7(this.value)">
-              <output style="text-align:center;" id="op7">0</output>
+              <input type="range" class="form-control-range" min="0" max="100" id="form7" value=0 oninput="outputUpdate7(this.value)">
+              <output class="op rfs-25 fw-bold" style="text-align:center;" id="op7">0</output>
               <br>
               <br>
               <label for="formControlRange"><h3>On a scale of 1 to 100, how would you rate your pet's respiratory health?</h3></label>
-              <input type="range" class="form-control-range" min="1" max="100" id="form8" value=0 oninput="outputUpdate8(this.value)">
-              <output style="text-align:center;" id="op8">0</output><br>
+              <input type="range" class="form-control-range" min="0" max="100" id="form8" value=0 oninput="outputUpdate8(this.value)">
+              <output class="op rfs-25 fw-bold" style="text-align:center;" id="op8">0</output><br>
               <br>
               <label for="formControlRange"><h3>Does your pet have any chronic medical conditions? Please rate their severity on a scale of 1 to 100.</h3></label>
-              <input type="range" class="form-control-range" min="1" max="100" id="form9" value=0 oninput="outputUpdate9(this.value)">
-              <output style="text-align:center;" id="op9">0</output>
+              <input type="range" class="form-control-range" min="0" max="100" id="form9" value=0 oninput="outputUpdate9(this.value)">
+              <output class="op rfs-25 fw-bold" style="text-align:center;" id="op9">0</output>
               <br>
               <br>
               <label for="formControlRange"><h3>How would you rate your pet's musculoskeletal health and mobility?</h3></label>
-              <input type="range" class="form-control-range" min="1" max="100" id="form10" value=0 oninput="outputUpdate10(this.value)">
-              <output style="text-align:center;" id="op10">0</output><br>
+              <input type="range" class="form-control-range" min="0" max="100" id="form10" value=0 oninput="outputUpdate10(this.value)">
+              <output class="op rfs-25 fw-bold" style="text-align:center;" id="op10">0</output><br>
               <br>
               <label for="formControlRange"><h3>On a scale of 1 to 100, how well does your pet handle stress and adapt to changes in their environment? </h3></label>
-              <input type="range" class="form-control-range" min="1" max="100" id="form11" value=0 oninput="outputUpdate11(this.value)">
-              <output style="text-align:center;" id="op11">0</output>
+              <input type="range" class="form-control-range" min="0" max="100" id="form11" value=0 oninput="outputUpdate11(this.value)">
+              <output class="op rfs-25 fw-bold" style="text-align:center;" id="op11">0</output>
               <br>
               <br>
               <label for="formControlRange"><h3>On a scale of 1 to 100 , how well does your pet handle stress and adapt to changes in their environment?</h3></label>
-              <input type="range" class="form-control-range" min="1" max="100" id="form12" value=0 oninput="outputUpdate12(this.value)">
-              <output style="text-align:center;" id="op12">0</output><br>
+              <input type="range" class="form-control-range" min="0" max="100" id="form12" value=0 oninput="outputUpdate12(this.value)">
+              <output class="op rfs-25 fw-bold" style="text-align:center;" id="op12">0</output><br>
               <br>
               <label for="formControlRange"><h3>How would you rate your pet's mental and emotional well-being?</h3></label>
-              <input type="range" class="form-control-range" min="1" max="100" id="form13" value=0 oninput="outputUpdate13(this.value)">
-              <output style="text-align:center;" id="op13">0</output>
+              <input type="range" class="form-control-range" min="0" max="100" id="form13" value=0 oninput="outputUpdate13(this.value)">
+              <output class="op rfs-20 fw-bold" style="text-align:center;" id="op13">0</output>
               <br>
               <br>
               <label for="formControlRange"><h3>On a scale of 1 to 100, how would you rate your pet's vision and eye health? </h3></label>
-              <input type="range" class="form-control-range" min="1" max="100" id="form14" value=0 oninput="outputUpdate14(this.value)">
-              <output style="text-align:center;" id="op14">0</output>
+              <input type="range" class="form-control-range" min="0" max="100" id="form14" value=0 oninput="outputUpdate14(this.value)">
+              <output class="op rfs-20 fw-bold" style="text-align:center;" id="op14">0</output>
               <br>
               <br>
               <label for="formControlRange"><h3>Please rate your pet's overall quality of life on a scale of 1 to 100. </h3></label>
-              <input type="range" class="form-control-range" min="1" max="100" id="form15" value=0 oninput="outputUpdate15(this.value)">
-              <output style="text-align:center;" id="op15">0</output>
+              <input type="range" class="form-control-range" min="0" max="100" id="form15" value=0 oninput="outputUpdate15(this.value)">
+              <output class="op rfs-20 fw-bold" style="text-align:center;" id="op15">0</output>
               <br>
               <br>
 
 
+                           </div>
+                    </div>
 
-
-<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light" style="border-radius: 21px 21px 21px 21px">
-
-      <div class="bg-dark flash shadow-sm mx-auto zoom-box align-items-center text-light" style="width: 80%; height: 300px;  border-radius: 23px 23px 23px 23px;" href="./doctor-list" >
-
-                  <div class="col-md-5 p-lg-5 mx-auto my-5 align-items-center" >
-                      <output class="display-6 fw-normal" style="text-align:center;" id="avg">Fill the Form to Unlock the Score!</output>
-                      <br>
-                      <br>
-
-
-                    <button type="button" id="submitBtn" class="btn btn-outline-primary" onclick="average()">Submit</button>
                   </div>
-      </div>
 
-</div>
+                </div>
+                 </p>
+                </div>
 
- </div>
-      </form>
+
+
+
+            </div>
+<div class="row justify-content-center">
+            <div class="lc-block text-center col-md-8">
+                <div editable="rich">
+                    <h1 class="rfs-25 fw-bold op">
+                        <output class="display-6 fw-normal rfs-25 fw-bold " style="text-align:center;" id="avg">Click the button below to Unlock your score!</output>
+                        <br></h1><br><h1>
+                        <button type="button" id="submitBtn" class="btn btn-outline-primary" onclick="average()">Submit</button>
+                    </h1>
+                </div>
+            </div>
+        </div>
+        </div>
     </div>
-  </div>
-</div>
 
 
 
 
 
 
-      {%endblock%}
+      </form>
 
 
-<div class="b-example-divider"></div>
+
+
+
+
+
+
+
+
 
 <div class="container">
 <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
@@ -429,14 +480,17 @@ window.onscroll = function() {
 
 <ul class="nav col-md-4 justify-content-end list-unstyled d-flex"><pre>
 </pre>
-<a class="btn btn-outline-light btn-floating m-1"  role="button"
-  ><img src="https://cdn-icons-png.flaticon.com/512/5783/5783311.png" height="50" width="50" alt=""></a>
+<a class="btn btn-outline-light btn-floating m-1"  role="button"><img src="https://cdn-icons-png.flaticon.com/512/5783/5783311.png" height="50" width="50" alt=""></a>
 
 </ul>
 </footer>
 </div>
 
 
+
+
+
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
     <!-- Optional JavaScript -->
        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -491,19 +545,19 @@ window.onscroll = function() {
         }
         function outputUpdate11(value) {
             document.getElementById("op11").textContent = value
- 
+
         }
         function outputUpdate12(value) {
             document.getElementById("op12").textContent = value
-          
+
         }
         function outputUpdate13(value) {
             document.getElementById("op13").textContent = value
-     
+
         }
         function outputUpdate14(value) {
             document.getElementById("op14").textContent = value
-     
+
         }
         function outputUpdate15(value) {
             document.getElementById("op15").textContent = value
@@ -511,8 +565,8 @@ window.onscroll = function() {
         }
         function average() {
             avg = parseInt(document.getElementById("op1").textContent) + parseInt(document.getElementById("op2").textContent) + parseInt(document.getElementById("op3").textContent) + parseInt(document.getElementById("op4").textContent) + parseInt(document.getElementById("op5").textContent) + parseInt(document.getElementById("op6").textContent) + parseInt(document.getElementById("op7").textContent) + parseInt(document.getElementById("op8").textContent) + parseInt(document.getElementById("op9").textContent) + parseInt(document.getElementById("op10").textContent) + parseInt(document.getElementById("op11").textContent) + parseInt(document.getElementById("op12").textContent) + parseInt(document.getElementById("op13").textContent) + parseInt(document.getElementById("op14").textContent) + parseInt(document.getElementById("op15").textContent)
-            document.getElementById("avg").textContent=(avg/15)
+            document.getElementById("avg").textContent=Math.floor(avg/15)
         }
     </script>
-  </body>
+</body>
 </html>

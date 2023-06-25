@@ -13,7 +13,7 @@
 <div class="container-fluid gedf-wrapper">
        <div class="row">
            <div class="col-md-3">
-               <div class="card flash ">
+               <div class="card flash " style="border-radius: 8px 8px 8px 8px">
                    <div class="card-body">
                        <div class="h5">{{user.username}}</div>
                        <div class="h7 text-muted">Pet : {{user.pet_type}} </div>
@@ -36,7 +36,7 @@
  {% for post in posts %}
 
  <div class="container-fluid ">
-  <div class="card gedf-card ">
+  <div class="card gedf-card " style="border-radius: 8px 8px 8px 8px">
                 <div class="card-header">
                       <div class="d-flex justify-content-between align-items-center">
                           <div class="d-flex justify-content-between align-items-center">
@@ -61,7 +61,7 @@
 
                   </div>
                   <div class="card-body">
-                      <div class="text-muted h7 mb-2"> <i class="bi bi-clock-history"></i> {{post.date_posted}} </div>
+                      <div class="text-muted h7 mb-2"> <i class="bi bi-clock"></i> {{post.date_posted}} </div>
                       <a class="card-link" href="">
                           <h5 class="card-title">{{post.title}}</h5>
                       </a>
@@ -83,7 +83,7 @@
 </div>
 
 <div class="col-md-3">
-  <div class="card flash ">
+  <div class="card flash " style="border-radius: 8px 8px 8px 8px">
     <div class="container ">
       <div class="row">
 
@@ -94,18 +94,18 @@
 
           <div class="form-group">
               <label >Title<span class="require"> *</span></label>
-              <input type="text" class="form-control" name="title" required/>
+              <input type="text" class="form-control" name="title" style="border-radius: 8px 8px 8px 8px" required/>
           </div>
 
           <div class="form-group">
               <label >Pet type<span class="require"> *</span></label>
-              <input type="text" class="form-control" name="pet_type" required/>
+              <input type="text" class="form-control" name="pet_type" style="border-radius: 8px 8px 8px 8px" required/>
           </div>
 
 
           <div class="form-group">
               <label>Description<span class="require"> *</span></label>
-              <textarea rows="5" class="form-control" name="description" required></textarea>
+              <textarea rows="5" class="form-control" name="description" style="border-radius: 8px 8px 8px 8px" required></textarea>
 
           <div class="form-group">
 
@@ -137,7 +137,7 @@
           <button type="submit" class="btn btn-primary" style="margin-right: 50px; margin-left: 50px; " name="POST">
             Create
           </button>
-          <button class="btn btn-outline-primary" type="button" onclick="clearForm()" style="margin-left: 10px;">
+          <button class="btn btn-outline-light" type="button" onclick="clearForm()" style="margin-left: 10px;">
             Clear
           </button>
         </div>

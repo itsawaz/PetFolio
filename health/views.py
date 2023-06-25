@@ -7,6 +7,6 @@ def health(request):
     if request.method == 'POST' and 'logout' in request.POST:
         log_out(request)
         return redirect('login-home')
-    return render(request, 'health/health-home.html')
+    return render(request, 'health/health.html')
 
 # Create your views here.
