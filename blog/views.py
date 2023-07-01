@@ -8,7 +8,16 @@ from django.contrib.auth.models import User
 
 
 def blog(request):
+
+    user = request.user
+
+    peto = Peto.objects.get(username=user.username)
+    bio = peto.bio
+    ptype = peto.pet_type
+
     context = {
+        'peto_bio': bio,
+        'peto_type': ptype,
         'posts': Post.objects.all().order_by('-date_posted')
 
     }
@@ -24,14 +33,16 @@ def blog(request):
 
 @login_required
 def post(request):
-    title = request.POST['title']
-    description = request.POST['description']
-    author = request.user
-    pet_type = request.POST.get('pet_type')
-    post = Post.objects.create(title=title, content=description, pet_type=pet_type, author=author)
-    post.save()
-    messages.success(request, f'Posted Successfully')
-    return redirect('blog-home')
+    if request.method == 'POST':
+        title = request.POST['title']
+        description = request.POST['description']
+        author = request.user
+        pet_type = request.POST.get('pet_type')
+
+        post = Post.objects.create(title=title, content=description, pet_type=pet_type, author=author)
+        post.save()
+        messages.success(request, f'Posted Successfully')
+        return redirect('blog-home')
 
 
 def log_out(request):

@@ -1,29 +1,25 @@
 {% extends "blog/base.html" %}
 
 
-<!-- This is a comment in HTML
-<h2>{{post.title}}</h2>
-<p> By <b>{{post.name}}</b> on <b>{{post.date}}</b></p>
-<p>{{post.content}}</p>
-<p><i>{{post.pet_type}}</i></p>
- -->
 
 {% block content%}
 
 <div class="container-fluid gedf-wrapper">
        <div class="row">
            <div class="col-md-3">
-               <div class="card flash " style="border-radius: 8px 8px 8px 8px">
+               <div class="card flash " style="border-radius: 8px 8px 0px 0px">
                    <div class="card-body">
                        <div class="h5">{{user.username}}</div>
-                       <div class="h7 text-muted">Pet : {{user.pet_type}} </div>
-                       <div class="h7"> Owns two stupid fish.
-                       </div>
+                       <div class="h7 text">Pet : {{peto_type}} </div>
+
                    </div>
                    <ul class="list-group list-group-flush">
                        <li class="list-group-item">
-                           <div class="h6 text-muted">Bio</div>
-                           <div class="h5">I love fish!</div>
+                           <div class="h6 text-muted">Bio:</div>
+                           <div class="h6 text">{{peto_bio}}</div>
+                           <br><br>
+                           <div class="h6 text-muted">Email:</div>
+                           <div class="h6 text">{{user.email}}</div>
                        </li>
 
 
@@ -69,6 +65,9 @@
                       <p class="card-text">
                         {{post.content}}
                       </p>
+                      <p class="card-text">
+                        {{post.content}}
+                      </p>
                   </div>
 
               </div>
@@ -100,8 +99,8 @@
           <div class="form-group">
               <label >Pet type<span class="require"> *</span></label>
               <input type="text" class="form-control" name="pet_type" style="border-radius: 8px 8px 8px 8px" required/>
-          </div>
 
+          </div>
 
           <div class="form-group">
               <label>Description<span class="require"> *</span></label>

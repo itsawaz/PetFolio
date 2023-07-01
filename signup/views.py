@@ -12,6 +12,7 @@ def signup(request):
         password = request.POST.get('password')
         email = request.POST.get('email')
         pet_type = request.POST.get('pet_type')
+        bio = request.POST.get('bio')
 
 
         # Check if the username or email already exists in the database
@@ -20,7 +21,7 @@ def signup(request):
             return redirect('login-home')
         else:
             # Create a new user object and save it to the database
-            signup_db = Peto(username=username, password=password, email=email, pet_type=pet_type)
+            signup_db = Peto(username=username, password=password, email=email, pet_type=pet_type, bio=bio)
             signup_db.save()
             new_user = User.objects.create_user(username=username, email=email, password=password)
             new_user.save()
