@@ -8,7 +8,6 @@ from django.contrib.auth.models import User
 
 
 def blog(request):
-
     user = request.user
 
     peto = Peto.objects.get(username=user.username)
@@ -49,4 +48,3 @@ def log_out(request):
     logout(request)
     messages.error(request, f'Account logged out!')
     return redirect('login-home')
-

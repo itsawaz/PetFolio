@@ -9,14 +9,15 @@
            <div class="col-md-3">
                <div class="card flash " style="border-radius: 8px 8px 0px 0px">
                    <div class="card-body">
+
                        <div class="h5">{{user.username}}</div>
-                       <div class="h7 text">Pet : {{peto_type}} </div>
+                       <div class="h7 text">Pet :{% if user.is_authenticated %}     {{peto_type}}   {% endif %}</div>
 
                    </div>
                    <ul class="list-group list-group-flush">
                        <li class="list-group-item">
                            <div class="h6 text-muted">Bio:</div>
-                           <div class="h6 text">{{peto_bio}}</div>
+                           <div class="h6 text">{% if user.is_authenticated %}  {{peto_bio}}    {% endif %}</div>
                            <br><br>
                            <div class="h6 text-muted">Email:</div>
                            <div class="h6 text">{{user.email}}</div>
@@ -65,9 +66,7 @@
                       <p class="card-text">
                         {{post.content}}
                       </p>
-                      <p class="card-text">
-                        {{post.content}}
-                      </p>
+                        
                   </div>
 
               </div>

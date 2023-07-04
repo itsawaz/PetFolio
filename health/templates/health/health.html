@@ -444,10 +444,11 @@ window.onscroll = function() {
 <div class="row justify-content-center">
             <div class="lc-block text-center col-md-8">
                 <div editable="rich">
-                    <h1 class="rfs-25 fw-bold op">
-                        <output class="display-6 fw-normal rfs-25 fw-bold " style="text-align:center;" id="avg">Click the button below to Unlock your score!</output>
+                    <h1 class="rfs-25 fw-bold ">
+                        <output class="display-6 fw-normal rfs-25 fw-bold op" style="text-align:center;" id="avg">Click the button below to Unlock your score!</output>
+                        <output class="display-6 fw-normal rfs-25 fw-bold " style="text-align:center;" id="score"></output>
                         <br></h1><br><h1>
-                        <button type="button" id="submitBtn" class="btn btn-outline-primary" onclick="average()">Submit</button>
+                        <button type="button" id="submitBtn" class="btn btn-outline-primary " onclick="average()" >Submit</button>
                     </h1>
                 </div>
             </div>
@@ -565,8 +566,85 @@ window.onscroll = function() {
 
         }
         function average() {
-            avg = parseInt(document.getElementById("op1").textContent) + parseInt(document.getElementById("op2").textContent) + parseInt(document.getElementById("op3").textContent) + parseInt(document.getElementById("op4").textContent) + parseInt(document.getElementById("op5").textContent) + parseInt(document.getElementById("op6").textContent) + parseInt(document.getElementById("op7").textContent) + parseInt(document.getElementById("op8").textContent) + parseInt(document.getElementById("op9").textContent) + parseInt(document.getElementById("op10").textContent) + parseInt(document.getElementById("op11").textContent) + parseInt(document.getElementById("op12").textContent) + parseInt(document.getElementById("op13").textContent) + parseInt(document.getElementById("op14").textContent) + parseInt(document.getElementById("op15").textContent)
-            document.getElementById("avg").textContent=Math.floor(avg/15)
+            sum = parseInt(document.getElementById("op1").textContent) + parseInt(document.getElementById("op2").textContent) + parseInt(document.getElementById("op3").textContent) + parseInt(document.getElementById("op4").textContent) + parseInt(document.getElementById("op5").textContent) + parseInt(document.getElementById("op6").textContent) + parseInt(document.getElementById("op7").textContent) + parseInt(document.getElementById("op8").textContent) + parseInt(document.getElementById("op9").textContent) + parseInt(document.getElementById("op10").textContent) + parseInt(document.getElementById("op11").textContent) + parseInt(document.getElementById("op12").textContent) + parseInt(document.getElementById("op13").textContent) + parseInt(document.getElementById("op14").textContent) + parseInt(document.getElementById("op15").textContent)
+            mean =(sum/15)/10
+            if(mean>0 && mean<1)
+            {
+                mean=1
+            }
+            else
+            {
+                mean=Math.round(mean)
+            }
+            if(mean==10)
+                {
+                    tip ="Congratulations! You have a perfect score."
+                    document.getElementById("avg").textContent=tip
+                    document.getElementById("score").textContent=mean
+                }
+            else if(mean == 9)
+                {
+                    tip ="Well done! You have a near perfect score."
+                    document.getElementById("avg").textContent=tip
+                    document.getElementById("score").textContent=mean
+                }
+            else if(mean==8)
+                {
+                    tip ="Very good! You have a good score."
+                    document.getElementById("avg").textContent=tip
+                    document.getElementById("score").textContent=mean
+                }
+            else if(mean==7)
+                {
+                    tip ="You have a good score, but you can still do better!"
+                    document.getElementById("avg").textContent=tip
+                    document.getElementById("score").textContent=mean
+                }
+            else if(mean==6)
+                {
+                    tip ="Your Score is just above Average! You can do better by reading reviews of other people on the our blog."
+                    document.getElementById("avg").textContent=tip
+                    document.getElementById("score").textContent=mean
+                }
+            else if(mean==5)
+                {
+                    tip ="You have an Average Score. Refer our blog to get more help, on how to improve your pet's health!"
+                    document.getElementById("avg").textContent=tip
+                    document.getElementById("score").textContent=mean
+                }
+            else if(mean==4)
+                {
+                    tip ="Your score is below average! Refer a vet to get further guidance."
+                    document.getElementById("avg").textContent=tip
+                    document.getElementById("score").textContent=mean
+                }
+            else if(mean==3)
+                {
+                    tip ="You should take your pet to a vet as soon as possible!"
+                    document.getElementById("avg").textContent=tip
+                    document.getElementById("score").textContent=mean
+                }
+            else if(mean==2)
+                {
+                    tip ="Your pet may need the help of a professional!"
+                    document.getElementById("avg").textContent=tip
+                    document.getElementById("score").textContent=mean
+                }
+            else if(mean==1)
+                {
+                    tip ="Your pet is in a extremely bad situation!"
+                    document.getElementById("avg").textContent=tip
+                    document.getElementById("score").textContent=mean
+                }
+
+            else if(mean==0)
+                {
+                    tip ="You did not enter any values."
+                    document.getElementById("avg").textContent=tip
+                    document.getElementById("score").textContent="Enter values and try again!"
+                }
+
+
         }
         
     </script>
