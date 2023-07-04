@@ -11,15 +11,16 @@
                    <div class="card-body">
 
                        <div class="h5">{{user.username}}</div>
-                       <div class="h7 text">Pet :{% if user.is_authenticated %}     {{peto_type}}   {% endif %}</div>
+                       <div class="h7 text">{% if user.is_authenticated %}Pet :     {{peto_type}}  {% else %} <p>Please log in to view the Blogs</p>
+{% endif %} </div>
 
                    </div>
                    <ul class="list-group list-group-flush">
                        <li class="list-group-item">
-                           <div class="h6 text-muted">Bio:</div>
+                           <div class="h6 text-muted">{% if user.is_authenticated %}Bio:{% endif %}</div>
                            <div class="h6 text">{% if user.is_authenticated %}  {{peto_bio}}    {% endif %}</div>
                            <br><br>
-                           <div class="h6 text-muted">Email:</div>
+                           <div class="h6 text-muted">{% if user.is_authenticated %}Email:{% endif %}</div>
                            <div class="h6 text">{{user.email}}</div>
                        </li>
 

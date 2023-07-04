@@ -6,27 +6,36 @@ from blog.models import Post
 from signup.models import Peto
 from django.contrib.auth.models import User
 
+from django.core.exceptions import ObjectDoesNotExist
+
 
 def blog(request):
     user = request.user
+    context = {}
 
-    peto = Peto.objects.get(username=user.username)
-    bio = peto.bio
-    ptype = peto.pet_type
+    try:
+        peto = Peto.objects.get(username=user.username)
+        bio = peto.bio
+        ptype = peto.pet_type
 
-    context = {
-        'peto_bio': bio,
-        'peto_type': ptype,
-        'posts': Post.objects.all().order_by('-date_posted')
+        context = {
+            'peto_bio': bio,
+            'peto_type': ptype,
+            'posts': Post.objects.all().order_by('-date_posted')
+        }
 
-    }
+    except ObjectDoesNotExist:
+        messages.error(request, f'Log in to Continue')
+
     if request.method == 'POST' and 'POST' in request.POST:
         if request.user.is_authenticated:
             post(request)
         else:
             messages.error(request, f'Log in to Continue')
+
     if request.method == 'POST' and 'logout' in request.POST:
         log_out(request)
+
     return render(request, 'blog/blog.html', context)
 
 
