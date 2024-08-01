@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-cq%r+m32o=hl-e*s_agetv7$yqb5s6blpb_2uyu=4o*18yswsw
 DEBUG = True
 
 ALLOWED_HOSTS = ['petfolio-04jd.onrender.com']
-HOST = '0.0.0.0'
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -49,7 +49,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    #'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
