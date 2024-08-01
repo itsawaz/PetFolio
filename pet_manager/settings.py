@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-cq%r+m32o=hl-e*s_agetv7$yqb5s6blpb_2uyu=4o*18yswsw
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['petfolio-04jd.onrender.com']
 
 # Application definition
 
