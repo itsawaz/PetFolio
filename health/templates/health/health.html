@@ -222,31 +222,31 @@
       transform: scale(1);
     }
 
-    /* Navigation hover effects */
-    .nav-link {
+    /* Navigation hover effects - only for menu items, not logo */
+    .nav-link.px-2 {
       transition: all 0.3s ease-in-out;
       border-radius: 8px;
       position: relative;
       overflow: hidden;
     }
 
-    .nav-link:hover {
+    .nav-link.px-2:hover {
       background-color: #007bff;
       color: white !important;
       transform: translateY(-2px);
       box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
     }
 
-    .nav-link h4 {
+    .nav-link.px-2 h4 {
       transition: all 0.3s ease-in-out;
     }
 
-    .nav-link:hover h4 {
+    .nav-link.px-2:hover h4 {
       transform: scale(1.05);
     }
 
-    /* Add a subtle glow effect */
-    .nav-link:hover::before {
+    /* Add a subtle glow effect - only for menu items */
+    .nav-link.px-2:hover::before {
       content: '';
       position: absolute;
       top: 0;
@@ -267,13 +267,13 @@
       }
     }
 
-    /* Special hover effect for the logo */
+    /* Logo image hover effect - keep this separate and subtle */
     .nav-link img {
       transition: all 0.3s ease-in-out;
     }
 
     .nav-link:hover img {
-      transform: rotate(10deg) scale(1.1);
+      transform: rotate(5deg) scale(1.05);
     }
 
     /* Button hover effects */
@@ -589,6 +589,7 @@
 
 
                       </div>
+                    </form>
                   </div>
 
                 </div>
@@ -619,13 +620,8 @@
           </div>
         </div>
       </div>
-
-
-
-
-
-
-      </form>
+    </div>
+    <!-- End of content div -->
 
 
 
@@ -637,184 +633,184 @@
 
 
 
-      <div class="container">
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-          <div class="col-md-4 d-flex align-items-center">
+    <div class="container">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
 
-            <span class="mb-3 mb-md-0 text-muted">&copy; 2023 : Petfolio</span>
-          </div>
+          <span class="mb-3 mb-md-0 text-muted">&copy; 2025 : Petfolio</span>
+        </div>
 
-          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-            <pre>
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <pre>
 </pre>
-            <a class="btn btn-outline-light btn-floating m-1" role="button"><img
-                src="https://cdn-icons-png.flaticon.com/512/5783/5783311.png" height="50" width="50" alt=""></a>
+          <a class="btn btn-outline-light btn-floating m-1" role="button"><img
+              src="https://cdn-icons-png.flaticon.com/512/5783/5783311.png" height="50" width="50" alt=""></a>
 
-          </ul>
-        </footer>
-      </div>
-
-
+        </ul>
+      </footer>
+    </div>
 
 
 
-      <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-        crossorigin="anonymous"></script>
-
-      <!-- Optional JavaScript -->
-      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-      <!-- jQuery -->
-      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
-      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-      <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
-      <!-- Bootstrap JS -->
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
-        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
-        crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-        crossorigin="anonymous"></script>
-      <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"></script>
 
-      <script>
-        var avg = 0
-        function outputUpdate1(value) {
-          document.getElementById("op1").textContent = value
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+      integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"></script>
+    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+
+    <script>
+      var avg = 0
+      function outputUpdate1(value) {
+        document.getElementById("op1").textContent = value
+      }
+      function outputUpdate2(value) {
+        document.getElementById("op2").textContent = value
+      }
+      function outputUpdate3(value) {
+        document.getElementById("op3").textContent = value
+      }
+      function outputUpdate4(value) {
+        document.getElementById("op4").textContent = value
+      }
+      function outputUpdate5(value) {
+        document.getElementById("op5").textContent = value
+      }
+      function outputUpdate6(value) {
+        document.getElementById("op6").textContent = value
+      }
+      function outputUpdate7(value) {
+        document.getElementById("op7").textContent = value
+      }
+      function outputUpdate8(value) {
+        document.getElementById("op8").textContent = value
+      }
+      function outputUpdate9(value) {
+        document.getElementById("op9").textContent = value
+      }
+      function outputUpdate10(value) {
+        document.getElementById("op10").textContent = value
+
+      }
+      function outputUpdate11(value) {
+        document.getElementById("op11").textContent = value
+
+      }
+      function outputUpdate12(value) {
+        document.getElementById("op12").textContent = value
+
+      }
+      function outputUpdate13(value) {
+        document.getElementById("op13").textContent = value
+
+      }
+      function outputUpdate14(value) {
+        document.getElementById("op14").textContent = value
+
+      }
+      function outputUpdate15(value) {
+        document.getElementById("op15").textContent = value
+
+      }
+      function average() {
+        sum = parseInt(document.getElementById("op1").textContent) + parseInt(document.getElementById("op2").textContent) + parseInt(document.getElementById("op3").textContent) + parseInt(document.getElementById("op4").textContent) + parseInt(document.getElementById("op5").textContent) + parseInt(document.getElementById("op6").textContent) + parseInt(document.getElementById("op7").textContent) + parseInt(document.getElementById("op8").textContent) + parseInt(document.getElementById("op9").textContent) + parseInt(document.getElementById("op10").textContent) + parseInt(document.getElementById("op11").textContent) + parseInt(document.getElementById("op12").textContent) + parseInt(document.getElementById("op13").textContent) + parseInt(document.getElementById("op14").textContent) + parseInt(document.getElementById("op15").textContent)
+        mean = (sum / 15) / 10
+        if (mean > 0 && mean < 1) {
+          mean = 1
         }
-        function outputUpdate2(value) {
-          document.getElementById("op2").textContent = value
+        else {
+          mean = Math.round(mean)
         }
-        function outputUpdate3(value) {
-          document.getElementById("op3").textContent = value
+        if (mean == 10) {
+          tip = "Congratulations! You have a perfect score."
+          document.getElementById("avg").textContent = tip
+          document.getElementById("score").textContent = mean
         }
-        function outputUpdate4(value) {
-          document.getElementById("op4").textContent = value
+        else if (mean == 9) {
+          tip = "Well done! You have a near perfect score."
+          document.getElementById("avg").textContent = tip
+          document.getElementById("score").textContent = mean
         }
-        function outputUpdate5(value) {
-          document.getElementById("op5").textContent = value
+        else if (mean == 8) {
+          tip = "Very good! You have a good score."
+          document.getElementById("avg").textContent = tip
+          document.getElementById("score").textContent = mean
         }
-        function outputUpdate6(value) {
-          document.getElementById("op6").textContent = value
+        else if (mean == 7) {
+          tip = "You have a good score, but you can still do better!"
+          document.getElementById("avg").textContent = tip
+          document.getElementById("score").textContent = mean
         }
-        function outputUpdate7(value) {
-          document.getElementById("op7").textContent = value
+        else if (mean == 6) {
+          tip = "Your Score is just above Average! You can do better by reading reviews of other people on the our blog."
+          document.getElementById("avg").textContent = tip
+          document.getElementById("score").textContent = mean
         }
-        function outputUpdate8(value) {
-          document.getElementById("op8").textContent = value
+        else if (mean == 5) {
+          tip = "You have an Average Score. Refer our blog to get more help, on how to improve your pet's health!"
+          document.getElementById("avg").textContent = tip
+          document.getElementById("score").textContent = mean
         }
-        function outputUpdate9(value) {
-          document.getElementById("op9").textContent = value
+        else if (mean == 4) {
+          tip = "Your score is below average! Refer a vet to get further guidance."
+          document.getElementById("avg").textContent = tip
+          document.getElementById("score").textContent = mean
         }
-        function outputUpdate10(value) {
-          document.getElementById("op10").textContent = value
-
+        else if (mean == 3) {
+          tip = "You should take your pet to a vet as soon as possible!"
+          document.getElementById("avg").textContent = tip
+          document.getElementById("score").textContent = mean
         }
-        function outputUpdate11(value) {
-          document.getElementById("op11").textContent = value
-
+        else if (mean == 2) {
+          tip = "Your pet may need the help of a professional!"
+          document.getElementById("avg").textContent = tip
+          document.getElementById("score").textContent = mean
         }
-        function outputUpdate12(value) {
-          document.getElementById("op12").textContent = value
-
-        }
-        function outputUpdate13(value) {
-          document.getElementById("op13").textContent = value
-
-        }
-        function outputUpdate14(value) {
-          document.getElementById("op14").textContent = value
-
-        }
-        function outputUpdate15(value) {
-          document.getElementById("op15").textContent = value
-
-        }
-        function average() {
-          sum = parseInt(document.getElementById("op1").textContent) + parseInt(document.getElementById("op2").textContent) + parseInt(document.getElementById("op3").textContent) + parseInt(document.getElementById("op4").textContent) + parseInt(document.getElementById("op5").textContent) + parseInt(document.getElementById("op6").textContent) + parseInt(document.getElementById("op7").textContent) + parseInt(document.getElementById("op8").textContent) + parseInt(document.getElementById("op9").textContent) + parseInt(document.getElementById("op10").textContent) + parseInt(document.getElementById("op11").textContent) + parseInt(document.getElementById("op12").textContent) + parseInt(document.getElementById("op13").textContent) + parseInt(document.getElementById("op14").textContent) + parseInt(document.getElementById("op15").textContent)
-          mean = (sum / 15) / 10
-          if (mean > 0 && mean < 1) {
-            mean = 1
-          }
-          else {
-            mean = Math.round(mean)
-          }
-          if (mean == 10) {
-            tip = "Congratulations! You have a perfect score."
-            document.getElementById("avg").textContent = tip
-            document.getElementById("score").textContent = mean
-          }
-          else if (mean == 9) {
-            tip = "Well done! You have a near perfect score."
-            document.getElementById("avg").textContent = tip
-            document.getElementById("score").textContent = mean
-          }
-          else if (mean == 8) {
-            tip = "Very good! You have a good score."
-            document.getElementById("avg").textContent = tip
-            document.getElementById("score").textContent = mean
-          }
-          else if (mean == 7) {
-            tip = "You have a good score, but you can still do better!"
-            document.getElementById("avg").textContent = tip
-            document.getElementById("score").textContent = mean
-          }
-          else if (mean == 6) {
-            tip = "Your Score is just above Average! You can do better by reading reviews of other people on the our blog."
-            document.getElementById("avg").textContent = tip
-            document.getElementById("score").textContent = mean
-          }
-          else if (mean == 5) {
-            tip = "You have an Average Score. Refer our blog to get more help, on how to improve your pet's health!"
-            document.getElementById("avg").textContent = tip
-            document.getElementById("score").textContent = mean
-          }
-          else if (mean == 4) {
-            tip = "Your score is below average! Refer a vet to get further guidance."
-            document.getElementById("avg").textContent = tip
-            document.getElementById("score").textContent = mean
-          }
-          else if (mean == 3) {
-            tip = "You should take your pet to a vet as soon as possible!"
-            document.getElementById("avg").textContent = tip
-            document.getElementById("score").textContent = mean
-          }
-          else if (mean == 2) {
-            tip = "Your pet may need the help of a professional!"
-            document.getElementById("avg").textContent = tip
-            document.getElementById("score").textContent = mean
-          }
-          else if (mean == 1) {
-            tip = "Your pet is in a extremely bad situation!"
-            document.getElementById("avg").textContent = tip
-            document.getElementById("score").textContent = mean
-          }
-
-          else if (mean == 0) {
-            tip = "You did not enter any values."
-            document.getElementById("avg").textContent = tip
-            document.getElementById("score").textContent = "Enter values and try again!"
-          }
-
-
+        else if (mean == 1) {
+          tip = "Your pet is in a extremely bad situation!"
+          document.getElementById("avg").textContent = tip
+          document.getElementById("score").textContent = mean
         }
 
-      </script>
+        else if (mean == 0) {
+          tip = "You did not enter any values."
+          document.getElementById("avg").textContent = tip
+          document.getElementById("score").textContent = "Enter values and try again!"
+        }
+
+
+      }
+
+    </script>
 </body>
 
 </html>

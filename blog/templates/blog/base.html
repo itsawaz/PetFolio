@@ -30,31 +30,31 @@
       text-decoration: none !important;
     }
 
-    /* Navigation hover effects */
-    .nav-link {
+    /* Navigation hover effects - only for menu items, not logo */
+    .nav-link.px-2 {
       transition: all 0.3s ease-in-out;
       border-radius: 8px;
       position: relative;
       overflow: hidden;
     }
 
-    .nav-link:hover {
+    .nav-link.px-2:hover {
       background-color: #007bff;
       color: white !important;
       transform: translateY(-2px);
       box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
     }
 
-    .nav-link h4 {
+    .nav-link.px-2 h4 {
       transition: all 0.3s ease-in-out;
     }
 
-    .nav-link:hover h4 {
+    .nav-link.px-2:hover h4 {
       transform: scale(1.05);
     }
 
-    /* Add a subtle glow effect */
-    .nav-link:hover::before {
+    /* Add a subtle glow effect - only for menu items */
+    .nav-link.px-2:hover::before {
       content: '';
       position: absolute;
       top: 0;
@@ -75,13 +75,13 @@
       }
     }
 
-    /* Special hover effect for the logo */
+    /* Logo image hover effect - keep this separate and subtle */
     .nav-link img {
       transition: all 0.3s ease-in-out;
     }
 
     .nav-link:hover img {
-      transform: rotate(10deg) scale(1.1);
+      transform: rotate(5deg) scale(1.05);
     }
 
     /* Button hover effects */
@@ -196,7 +196,7 @@
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
       <div class="col-md-4 d-flex align-items-center">
 
-        <span class="mb-3 mb-md-0 text-muted">&copy; 2023 : Petfolio</span>
+        <span class="mb-3 mb-md-0 text-muted">&copy; 2025 : Petfolio</span>
       </div>
 
       <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
