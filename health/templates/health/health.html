@@ -3,254 +3,327 @@
 
 <head>
   <style>
+    /* Custom CSS to center content */
+    .center-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50vh;
+    }
 
-        /* Custom CSS to center content */
-        .center-content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 50vh;
-        }
+    .flash {
+      background: linear-gradient(-45deg, #020024, #00d4ff, #090979);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+      height: 100vh;
+    }
 
-      .flash{
-	background: linear-gradient(-45deg, #020024, #00d4ff, #090979);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-	height: 100vh;
-}
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
 
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
+      50% {
+        background-position: 100% 50%;
+      }
 
-.op {
-  background: linear-gradient(-45deg, #020024, #00d4ff, #090979);
-  -webkit-background-clip: text;
-   background-clip: text;
-   text-fill-color: transparent;
-   background-size: 500% auto;
-  -webkit-text-fill-color: transparent;
-  animation: gradientAnimation 5s linear infinite;
-}
+      100% {
+        background-position: 0% 50%;
+      }
+    }
 
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
+    .op {
+      background: linear-gradient(-45deg, #020024, #00d4ff, #090979);
+      -webkit-background-clip: text;
+      background-clip: text;
+      text-fill-color: transparent;
+      background-size: 500% auto;
+      -webkit-text-fill-color: transparent;
+      animation: gradientAnimation 5s linear infinite;
+    }
+
+    @keyframes gradientAnimation {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
 
     .card-title {
-  text-decoration: none !important;
-}
-.container {
-  max-width: 960px;
-}
+      text-decoration: none !important;
+    }
 
-/*
+    .container {
+      max-width: 960px;
+    }
+
+    /*
  * Custom translucent site header
  */
 
-.site-header {
-  background-color: rgba(0, 0, 0, .85);
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
-  backdrop-filter: saturate(180%) blur(20px);
-}
-.site-header a {
-  color: #8e8e8e;
-  transition: color .15s ease-in-out;
-}
-.site-header a:hover {
-  color: #fff;
-  text-decoration: none;
-}
+    .site-header {
+      background-color: rgba(0, 0, 0, .85);
+      -webkit-backdrop-filter: saturate(180%) blur(20px);
+      backdrop-filter: saturate(180%) blur(20px);
+    }
 
-/*
+    .site-header a {
+      color: #8e8e8e;
+      transition: color .15s ease-in-out;
+    }
+
+    .site-header a:hover {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /*
  * Dummy devices (replace them with your own or something else entirely!)
  */
 
-.product-device {
-  position: absolute;
-  right: 10%;
-  bottom: -30%;
-  width: 300px;
-  height: 540px;
-  background-color: #333;
-  border-radius: 21px;
-  transform: rotate(30deg);
-}
+    .product-device {
+      position: absolute;
+      right: 10%;
+      bottom: -30%;
+      width: 300px;
+      height: 540px;
+      background-color: #333;
+      border-radius: 21px;
+      transform: rotate(30deg);
+    }
 
-.product-device::before {
-  position: absolute;
-  top: 10%;
-  right: 10px;
-  bottom: 10%;
-  left: 10px;
-  content: "";
-  background-color: rgba(255, 255, 255, .1);
-  border-radius: 5px;
-}
+    .product-device::before {
+      position: absolute;
+      top: 10%;
+      right: 10px;
+      bottom: 10%;
+      left: 10px;
+      content: "";
+      background-color: rgba(255, 255, 255, .1);
+      border-radius: 5px;
+    }
 
-.product-device-2 {
-  top: -25%;
-  right: auto;
-  bottom: 0;
-  left: 5%;
-  background-color: #e5e5e5;
-}
+    .product-device-2 {
+      top: -25%;
+      right: auto;
+      bottom: 0;
+      left: 5%;
+      background-color: #e5e5e5;
+    }
 
 
-/*
+    /*
  * Extra utilities
  */
 
-.flex-equal > * {
-  flex: 1;
-}
-@media (min-width: 768px) {
-  .flex-md-equal > * {
-    flex: 1;
-  }
-}
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
+    .flex-equal>* {
+      flex: 1;
+    }
+
+    @media (min-width: 768px) {
+      .flex-md-equal>* {
+        flex: 1;
+      }
+    }
+
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .bg-body img {
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .bg-body img:hover {
+      transform: scale(1.1);
+    }
+
+    .bg-body img:hover:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 21px;
+      z-index: -1;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .bg-body img:hover:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2em;
+      color: white;
+      z-index: 1;
+    }
+
+    .bg-light img {
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .bg-light img:hover {
+      transform: scale(1.1);
+    }
+
+    .bg-light img:hover:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 23px;
+      z-index: -1;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .bg-light img:hover:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2em;
+      color: white;
+      z-index: 1;
+    }
+
+    .zoom-box {
+      transition: all 0.2s ease-in-out;
+      transform-origin: center center;
+    }
+
+    .zoom-in {
+      transform: scale(1.2);
+    }
+
+    .zoom-out {
+      transform: scale(1);
+    }
+
+    /* Navigation hover effects */
+    .nav-link {
+      transition: all 0.3s ease-in-out;
+      border-radius: 8px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .nav-link:hover {
+      background-color: #007bff;
+      color: white !important;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+    }
+
+    .nav-link h4 {
+      transition: all 0.3s ease-in-out;
+    }
+
+    .nav-link:hover h4 {
+      transform: scale(1.05);
+    }
+
+    /* Add a subtle glow effect */
+    .nav-link:hover::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      animation: shine 0.6s ease-in-out;
+    }
+
+    @keyframes shine {
+      0% {
+        left: -100%;
       }
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
+      100% {
+        left: 100%;
+      }
+    }
+
+    /* Special hover effect for the logo */
+    .nav-link img {
+      transition: all 0.3s ease-in-out;
+    }
+
+    .nav-link:hover img {
+      transform: rotate(10deg) scale(1.1);
+    }
+
+    /* Button hover effects */
+    .btn-outline-primary:hover,
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+      transition: all 0.3s ease-in-out;
+    }
+  </style>
+
+  <script>
+    let prevScrollPos = window.pageYOffset;
+
+    window.onscroll = function () {
+      let currentScrollPos = window.pageYOffset;
+
+      if (prevScrollPos > currentScrollPos) {
+        var zoomBoxes = document.getElementsByClassName("zoom-box");
+        for (var i = 0; i < zoomBoxes.length; i++) {
+          zoomBoxes[i].classList.remove("zoom-in");
+          zoomBoxes[i].classList.add("zoom-out");
+        }
+      } else {
+        var zoomBoxes = document.getElementsByClassName("zoom-box");
+        for (var i = 0; i < zoomBoxes.length; i++) {
+          zoomBoxes[i].classList.remove("zoom-out");
+          zoomBoxes[i].classList.add("zoom-in");
         }
       }
-      .bg-body img {
-  transition: transform 0.2s ease-in-out;
-}
-
-.bg-body img:hover {
-  transform: scale(1.1);
-}
-
-.bg-body img:hover:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 21px;
-  z-index: -1;
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-.bg-body img:hover:before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 2em;
-  color: white;
-  z-index: 1;
-}
-.bg-light img {
-  transition: transform 0.2s ease-in-out;
-}
-
-.bg-light img:hover {
-  transform: scale(1.1);
-}
-
-.bg-light img:hover:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 23px;
-  z-index: -1;
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-.bg-light img:hover:before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 2em;
-  color: white;
-  z-index: 1;
-}
-.zoom-box {
-  transition: all 0.2s ease-in-out;
-  transform-origin: center center;
-}
-
-.zoom-in {
-  transform: scale(1.2);
-}
-
-.zoom-out {
-  transform: scale(1);
-}
-
-    </style>
-
-<script>
-let prevScrollPos = window.pageYOffset;
-
-window.onscroll = function() {
-  let currentScrollPos = window.pageYOffset;
-
- if (prevScrollPos > currentScrollPos) {
-  var zoomBoxes = document.getElementsByClassName("zoom-box");
-  for (var i = 0; i < zoomBoxes.length; i++) {
-    zoomBoxes[i].classList.remove("zoom-in");
-    zoomBoxes[i].classList.add("zoom-out");
-  }
-} else {
-  var zoomBoxes = document.getElementsByClassName("zoom-box");
-  for (var i = 0; i < zoomBoxes.length; i++) {
-    zoomBoxes[i].classList.remove("zoom-out");
-    zoomBoxes[i].classList.add("zoom-in");
-  }
-}
 
 
-  prevScrollPos = currentScrollPos;
-}
+      prevScrollPos = currentScrollPos;
+    }
 
-</script>
-    <title>Health</title>
+  </script>
+  <title>Health</title>
 
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
-    <link rel="stylesheet" id="picostrap-styles-css" href="https://cdn.livecanvas.com/media/css/library/bundle.css" media="all">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
+  <link rel="stylesheet" id="picostrap-styles-css" href="https://cdn.livecanvas.com/media/css/library/bundle.css"
+    media="all">
 
-    <!-- Required meta tags -->
-   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-   <!-- Bootstrap CSS -->
+  <!-- Bootstrap CSS -->
 
-       <!-- Bootstrap core CSS -->
-      <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <!-- Bootstrap core CSS -->
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
 
 
@@ -261,200 +334,291 @@ window.onscroll = function() {
 <body>
 
 
-    <div class="container">
-      <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-    <div class="nav align-items-center">
-        <a href="/blog" >
-        <img src="https://cdn-icons-png.flaticon.com/512/5783/5783311.png" width="70" height="70">
-        <a href="/blog" class="nav-link  link-primary"><h1>Petfolio</h1></a>
+  <div class="container">
+    <header
+      class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+      <div class="nav align-items-center">
+        <a href="/blog">
+          <img src="https://cdn-icons-png.flaticon.com/512/5783/5783311.png" width="70" height="70">
+          <a href="/blog" class="nav-link  link-primary">
+            <h1>Petfolio</h1>
+          </a>
         </a>
-    </div>
+      </div>
 
 
-     <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-       <li><a href="/blog" class="nav-link px-2 link-dark"><h4>Blog</h4></a></li>
-       <li><a href="/health" class="nav-link px-2 link-selected"><h4>Health</h4></a></li>
-       <li><a href="/shop" class="nav-link px-2 link-dark"><h4>Shop</h4></a></li>
-       <li><a href="/doctor" class="nav-link px-2 link-dark"><h4>Doctor</h4></a></li>
-       <li><a href="/about" class="nav-link px-2 link-dark"><h4>About</h4></a></li>
-     </ul>
+      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="/blog" class="nav-link px-2 link-dark">
+            <h4>Blog</h4>
+          </a></li>
+        <li><a href="/health" class="nav-link px-2 link-selected">
+            <h4>Health</h4>
+          </a></li>
+        <li><a href="/shop" class="nav-link px-2 link-dark">
+            <h4>Shop</h4>
+          </a></li>
+        <li><a href="/doctor" class="nav-link px-2 link-dark">
+            <h4>Doctor</h4>
+          </a></li>
+        <li><a href="/about" class="nav-link px-2 link-dark">
+            <h4>About</h4>
+          </a></li>
+      </ul>
 
 
-                  <div>
-                      {% if user.is_authenticated %}
-                        <form method="POST">
-                    {% csrf_token %}
-                    <button class="btn btn-outline-primary me-2" type="submit" name="logout">Logout</button>
-                        </form>
+      <div>
+        {% if user.is_authenticated %}
+        <form method="POST">
+          {% csrf_token %}
+          <button class="btn btn-outline-primary me-2" type="submit" name="logout">Logout</button>
+        </form>
 
-                      {% else %}
+        {% else %}
 
-       <button type="button" onclick="window.location.href='{% url 'login-home' %}'" class="btn btn-outline-primary me-2">Login</button>
-       <button type="button" onclick="window.location.href='{% url 'signup-home' %}'" class="btn btn-primary">Sign-up</button>
+        <button type="button" onclick="window.location.href='{% url 'login-home' %}'"
+          class="btn btn-outline-primary me-2">Login</button>
+        <button type="button" onclick="window.location.href='{% url 'signup-home' %}'"
+          class="btn btn-primary">Sign-up</button>
 
-                      {% endif %}
+        {% endif %}
 
-                  </div>
-
-
-   </header>
- </div>
+      </div>
 
 
+    </header>
+  </div>
 
 
 
-  <div class="content" >
+
+
+  <div class="content">
     <div class="container-fluid pt-5">
-        <div class="row mb-4 mb-lg-5 justify-content-lg-between">
-            <div class="col-3 col-md-1 col-lg-2 d-none d-md-flex align-items-center">
-                <div class="lc-block">
-                    <img class="img-fluid zoom-box" style="width: 200px; height: 200px; object-fit: cover;border-radius: 15px 15px 15px 15px"  src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=394&q=80" alt="Photo by Simone Hutsch">
-                </div><!-- /lc-block -->            </div><!-- /col -->
-            <div class="col-4 col-md-3 col-lg-2 d-flex flex-column justify-content-between">
-                <div class="lc-block">
-                    <img class="img-fluid zoom-box" style="width: 200px; height: 200px; object-fit: cover;border-radius: 15px 15px 15px 15px"  src="https://images.unsplash.com/photo-1606214174585-fe31582dc6ee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80" alt="Photo by Simone Hutsch">
-                </div><!-- /lc-block -->                <div class="lc-block">
-                    <img class="img-fluid zoom-box" style="width: 200px; height: 200px; object-fit: cover;border-radius: 15px 15px 15px 15px"  src="https://images.unsplash.com/photo-1625316708582-7c38734be31d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80" alt="Photo by Meriç Dağlı">
-                </div><!-- /lc-block -->
-            </div><!-- /col -->
-            <div class="col-4 col-md-4 col-lg-3"> <img class="" src="https://images.unsplash.com/photo-1598133894008-61f7fdb8cc3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=388&q=80" style="object-fit:cover;border-radius: 15px 15px 15px 15px" alt="Photo by Simone Hutsch"></div><!-- /col -->
-            <div class="col-4 col-md-3 col-lg-2 d-flex flex-column justify-content-between">
-                <div class="lc-block">
-                    <img class="img-fluid zoom-box" style="width: 200px; height: 200px; object-fit: cover;border-radius: 15px 15px 15px 15px"  src="https://images.unsplash.com/photo-1517849845537-4d257902454a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80" alt="Photo by Simone Hutsch">
-                </div><!-- /lc-block -->
-                <div class="lc-block">
-                    <img class="img-fluid zoom-box" style="width: 200px; height: 200px; object-fit: cover;border-radius: 15px 15px 15px 15px"  src="https://images.unsplash.com/photo-1583512603805-3cc6b41f3edb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Photo by Simone Hutsch">
-                </div><!-- /lc-block -->            </div><!-- /col -->
-            <div class="col-3 col-md-1 col-lg-2 d-none d-md-flex  align-items-center">
-                <div class="lc-block">
-                    <img class="img-fluid zoom-box" style="width: 200px; height: 200px; object-fit: cover;border-radius: 15px 15px 15px 15px" src="https://images.unsplash.com/photo-1629740067905-bd3f515aa739?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=388&q=80" alt="Photo by Simone Hutsch">
-                </div><!-- /lc-block -->            </div><!-- /col -->
-        </div>
+      <div class="row mb-4 mb-lg-5 justify-content-lg-between">
+        <div class="col-3 col-md-1 col-lg-2 d-none d-md-flex align-items-center">
+          <div class="lc-block">
+            <img class="img-fluid zoom-box"
+              style="width: 200px; height: 200px; object-fit: cover;border-radius: 15px 15px 15px 15px"
+              src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=394&q=80"
+              alt="Photo by Simone Hutsch">
+          </div><!-- /lc-block -->
+        </div><!-- /col -->
+        <div class="col-4 col-md-3 col-lg-2 d-flex flex-column justify-content-between">
+          <div class="lc-block">
+            <img class="img-fluid zoom-box"
+              style="width: 200px; height: 200px; object-fit: cover;border-radius: 15px 15px 15px 15px"
+              src="https://images.unsplash.com/photo-1606214174585-fe31582dc6ee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80"
+              alt="Photo by Simone Hutsch">
+          </div><!-- /lc-block -->
+          <div class="lc-block">
+            <img class="img-fluid zoom-box"
+              style="width: 200px; height: 200px; object-fit: cover;border-radius: 15px 15px 15px 15px"
+              src="https://images.unsplash.com/photo-1625316708582-7c38734be31d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
+              alt="Photo by Meriç Dağlı">
+          </div><!-- /lc-block -->
+        </div><!-- /col -->
+        <div class="col-4 col-md-4 col-lg-3"> <img class=""
+            src="https://images.unsplash.com/photo-1598133894008-61f7fdb8cc3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=388&q=80"
+            style="object-fit:cover;border-radius: 15px 15px 15px 15px" alt="Photo by Simone Hutsch"></div><!-- /col -->
+        <div class="col-4 col-md-3 col-lg-2 d-flex flex-column justify-content-between">
+          <div class="lc-block">
+            <img class="img-fluid zoom-box"
+              style="width: 200px; height: 200px; object-fit: cover;border-radius: 15px 15px 15px 15px"
+              src="https://images.unsplash.com/photo-1517849845537-4d257902454a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80"
+              alt="Photo by Simone Hutsch">
+          </div><!-- /lc-block -->
+          <div class="lc-block">
+            <img class="img-fluid zoom-box"
+              style="width: 200px; height: 200px; object-fit: cover;border-radius: 15px 15px 15px 15px"
+              src="https://images.unsplash.com/photo-1583512603805-3cc6b41f3edb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80"
+              alt="Photo by Simone Hutsch">
+          </div><!-- /lc-block -->
+        </div><!-- /col -->
+        <div class="col-3 col-md-1 col-lg-2 d-none d-md-flex  align-items-center">
+          <div class="lc-block">
+            <img class="img-fluid zoom-box"
+              style="width: 200px; height: 200px; object-fit: cover;border-radius: 15px 15px 15px 15px"
+              src="https://images.unsplash.com/photo-1629740067905-bd3f515aa739?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=388&q=80"
+              alt="Photo by Simone Hutsch">
+          </div><!-- /lc-block -->
+        </div><!-- /col -->
+      </div>
 
-<br><br><br>
+      <br><br><br>
 
-    <div class="container">
+      <div class="container">
         <div class="row justify-content-center">
-            <div class="lc-block text-center col-md-8">
-                <div editable="rich">
-                    <h1 class="rfs-25 fw-bold op">Take a survey to know your Score as a pet owner!</h1>
-                </div>
+          <div class="lc-block text-center col-md-8">
+            <div editable="rich">
+              <h1 class="rfs-25 fw-bold op">Take a survey to know your Score as a pet owner!</h1>
             </div>
+          </div>
         </div>
         <div class="row justify-content-center">
-            <div class="lc-block text-center col-xxl-6 col-md-8">
-                <div editable="rich">
-                    <p class="lead">
+          <div class="lc-block text-center col-xxl-6 col-md-8">
+            <div editable="rich">
+              <p class="lead">
 
 
-    <div class="container">
-  <div >
-    <div>
-      <form>
-          <div class="form-group">
-              <br>
-              <br>
-              <label for="formControlRange"><h3>How would you rate your pet's overall energy level and vitality?</h3></label>
-              <input type="range" class="form-control-range" min="0" max="100" id="form1" value=0 oninput="outputUpdate1(this.value)">
-              <output class="op rfs-25 fw-bold" style="text-align:center;" id="op1">0</output>
-              <br>
-              <br>
-              <label for="formControlRange"><h3>On a scale of 1 to 100, how would you rate your pet's appetite and eating habits?</h3></label>
-              <input type="range" class="form-control-range" min="0" max="100" id="form2" value=0 oninput="outputUpdate2(this.value)">
-              <output class="op rfs-25 fw-bold" style="text-align:center;" id="op2">0</output>
-              <br>
-              <br>
-              <label for="formControlRange"><h3>Does your pet maintain a healthy weight? Please rate on a scale of 1 to 100. </h3></label>
-              <input type="range" class="form-control-range" min="0" max="100" id="form3" value=0 oninput="outputUpdate3(this.value)">
-              <output class="op rfs-25 fw-bold" style="text-align:center;" id="op3">0</output>
-              <br>
-              <br>
-              <label for="formControlRange"><h3>How would you rate the condition of your pet's coat and skin? </h3></label>
-              <input type="range" class="form-control-range" min="0" max="100" id="form4" value=0 oninput="outputUpdate4(this.value)">
-              <output class="op rfs-25 fw-bold" style="text-align:center;" id="op4">0</output>
-              <br>
-              <br>
-              <label for="formControlRange"><h3>On a scale of 1 to 100, how well does your pet handle physical activity and exercise?</h3></label>
-              <input type="range" class="form-control-range" min="0" max="100" id="form5" value=0 oninput="outputUpdate5(this.value)">
-              <output class="op rfs-25 fw-bold" style="text-align:center;" id="op5">0</output>
-              <br>
-              <br>
-              <label for="formControlRange"><h3>Please rate your pet's dental health on a scale of 1 to 100.  </h3></label>
-              <input type="range" class="form-control-range" min="0" max="100" id="form6" value=0 oninput="outputUpdate6(this.value)">
-              <output class="op rfs-25 fw-bold" style="text-align:center;" id="op6">0</output><br>
-              <br>
-              <label for="formControlRange"><h3>How would you rate your pet's gastrointestinal health and regularity?</h3></label>
-              <input type="range" class="form-control-range" min="0" max="100" id="form7" value=0 oninput="outputUpdate7(this.value)">
-              <output class="op rfs-25 fw-bold" style="text-align:center;" id="op7">0</output>
-              <br>
-              <br>
-              <label for="formControlRange"><h3>On a scale of 1 to 100, how would you rate your pet's respiratory health?</h3></label>
-              <input type="range" class="form-control-range" min="0" max="100" id="form8" value=0 oninput="outputUpdate8(this.value)">
-              <output class="op rfs-25 fw-bold" style="text-align:center;" id="op8">0</output><br>
-              <br>
-              <label for="formControlRange"><h3>Does your pet have any chronic medical conditions? Please rate their severity on a scale of 1 to 100.</h3></label>
-              <input type="range" class="form-control-range" min="0" max="100" id="form9" value=0 oninput="outputUpdate9(this.value)">
-              <output class="op rfs-25 fw-bold" style="text-align:center;" id="op9">0</output>
-              <br>
-              <br>
-              <label for="formControlRange"><h3>How would you rate your pet's musculoskeletal health and mobility?</h3></label>
-              <input type="range" class="form-control-range" min="0" max="100" id="form10" value=0 oninput="outputUpdate10(this.value)">
-              <output class="op rfs-25 fw-bold" style="text-align:center;" id="op10">0</output><br>
-              <br>
-              <label for="formControlRange"><h3>On a scale of 1 to 100, how well does your pet handle stress and adapt to changes in their environment? </h3></label>
-              <input type="range" class="form-control-range" min="0" max="100" id="form11" value=0 oninput="outputUpdate11(this.value)">
-              <output class="op rfs-25 fw-bold" style="text-align:center;" id="op11">0</output>
-              <br>
-              <br>
-              <label for="formControlRange"><h3>On a scale of 1 to 100 , how well does your pet handle stress and adapt to changes in their environment?</h3></label>
-              <input type="range" class="form-control-range" min="0" max="100" id="form12" value=0 oninput="outputUpdate12(this.value)">
-              <output class="op rfs-25 fw-bold" style="text-align:center;" id="op12">0</output><br>
-              <br>
-              <label for="formControlRange"><h3>How would you rate your pet's mental and emotional well-being?</h3></label>
-              <input type="range" class="form-control-range" min="0" max="100" id="form13" value=0 oninput="outputUpdate13(this.value)">
-              <output class="op rfs-20 fw-bold" style="text-align:center;" id="op13">0</output>
-              <br>
-              <br>
-              <label for="formControlRange"><h3>On a scale of 1 to 100, how would you rate your pet's vision and eye health? </h3></label>
-              <input type="range" class="form-control-range" min="0" max="100" id="form14" value=0 oninput="outputUpdate14(this.value)">
-              <output class="op rfs-20 fw-bold" style="text-align:center;" id="op14">0</output>
-              <br>
-              <br>
-              <label for="formControlRange"><h3>Please rate your pet's overall quality of life on a scale of 1 to 100. </h3></label>
-              <input type="range" class="form-control-range" min="0" max="100" id="form15" value=0 oninput="outputUpdate15(this.value)">
-              <output class="op rfs-20 fw-bold" style="text-align:center;" id="op15">0</output>
-              <br>
-              <br>
+              <div class="container">
+                <div>
+                  <div>
+                    <form>
+                      <div class="form-group">
+                        <br>
+                        <br>
+                        <label for="formControlRange">
+                          <h3>How would you rate your pet's overall energy level and vitality?</h3>
+                        </label>
+                        <input type="range" class="form-control-range" min="0" max="100" id="form1" value=0
+                          oninput="outputUpdate1(this.value)">
+                        <output class="op rfs-25 fw-bold" style="text-align:center;" id="op1">0</output>
+                        <br>
+                        <br>
+                        <label for="formControlRange">
+                          <h3>On a scale of 1 to 100, how would you rate your pet's appetite and eating habits?</h3>
+                        </label>
+                        <input type="range" class="form-control-range" min="0" max="100" id="form2" value=0
+                          oninput="outputUpdate2(this.value)">
+                        <output class="op rfs-25 fw-bold" style="text-align:center;" id="op2">0</output>
+                        <br>
+                        <br>
+                        <label for="formControlRange">
+                          <h3>Does your pet maintain a healthy weight? Please rate on a scale of 1 to 100. </h3>
+                        </label>
+                        <input type="range" class="form-control-range" min="0" max="100" id="form3" value=0
+                          oninput="outputUpdate3(this.value)">
+                        <output class="op rfs-25 fw-bold" style="text-align:center;" id="op3">0</output>
+                        <br>
+                        <br>
+                        <label for="formControlRange">
+                          <h3>How would you rate the condition of your pet's coat and skin? </h3>
+                        </label>
+                        <input type="range" class="form-control-range" min="0" max="100" id="form4" value=0
+                          oninput="outputUpdate4(this.value)">
+                        <output class="op rfs-25 fw-bold" style="text-align:center;" id="op4">0</output>
+                        <br>
+                        <br>
+                        <label for="formControlRange">
+                          <h3>On a scale of 1 to 100, how well does your pet handle physical activity and exercise?</h3>
+                        </label>
+                        <input type="range" class="form-control-range" min="0" max="100" id="form5" value=0
+                          oninput="outputUpdate5(this.value)">
+                        <output class="op rfs-25 fw-bold" style="text-align:center;" id="op5">0</output>
+                        <br>
+                        <br>
+                        <label for="formControlRange">
+                          <h3>Please rate your pet's dental health on a scale of 1 to 100. </h3>
+                        </label>
+                        <input type="range" class="form-control-range" min="0" max="100" id="form6" value=0
+                          oninput="outputUpdate6(this.value)">
+                        <output class="op rfs-25 fw-bold" style="text-align:center;" id="op6">0</output><br>
+                        <br>
+                        <label for="formControlRange">
+                          <h3>How would you rate your pet's gastrointestinal health and regularity?</h3>
+                        </label>
+                        <input type="range" class="form-control-range" min="0" max="100" id="form7" value=0
+                          oninput="outputUpdate7(this.value)">
+                        <output class="op rfs-25 fw-bold" style="text-align:center;" id="op7">0</output>
+                        <br>
+                        <br>
+                        <label for="formControlRange">
+                          <h3>On a scale of 1 to 100, how would you rate your pet's respiratory health?</h3>
+                        </label>
+                        <input type="range" class="form-control-range" min="0" max="100" id="form8" value=0
+                          oninput="outputUpdate8(this.value)">
+                        <output class="op rfs-25 fw-bold" style="text-align:center;" id="op8">0</output><br>
+                        <br>
+                        <label for="formControlRange">
+                          <h3>Does your pet have any chronic medical conditions? Please rate their severity on a scale
+                            of 1 to 100.</h3>
+                        </label>
+                        <input type="range" class="form-control-range" min="0" max="100" id="form9" value=0
+                          oninput="outputUpdate9(this.value)">
+                        <output class="op rfs-25 fw-bold" style="text-align:center;" id="op9">0</output>
+                        <br>
+                        <br>
+                        <label for="formControlRange">
+                          <h3>How would you rate your pet's musculoskeletal health and mobility?</h3>
+                        </label>
+                        <input type="range" class="form-control-range" min="0" max="100" id="form10" value=0
+                          oninput="outputUpdate10(this.value)">
+                        <output class="op rfs-25 fw-bold" style="text-align:center;" id="op10">0</output><br>
+                        <br>
+                        <label for="formControlRange">
+                          <h3>On a scale of 1 to 100, how well does your pet handle stress and adapt to changes in their
+                            environment? </h3>
+                        </label>
+                        <input type="range" class="form-control-range" min="0" max="100" id="form11" value=0
+                          oninput="outputUpdate11(this.value)">
+                        <output class="op rfs-25 fw-bold" style="text-align:center;" id="op11">0</output>
+                        <br>
+                        <br>
+                        <label for="formControlRange">
+                          <h3>On a scale of 1 to 100 , how well does your pet handle stress and adapt to changes in
+                            their environment?</h3>
+                        </label>
+                        <input type="range" class="form-control-range" min="0" max="100" id="form12" value=0
+                          oninput="outputUpdate12(this.value)">
+                        <output class="op rfs-25 fw-bold" style="text-align:center;" id="op12">0</output><br>
+                        <br>
+                        <label for="formControlRange">
+                          <h3>How would you rate your pet's mental and emotional well-being?</h3>
+                        </label>
+                        <input type="range" class="form-control-range" min="0" max="100" id="form13" value=0
+                          oninput="outputUpdate13(this.value)">
+                        <output class="op rfs-20 fw-bold" style="text-align:center;" id="op13">0</output>
+                        <br>
+                        <br>
+                        <label for="formControlRange">
+                          <h3>On a scale of 1 to 100, how would you rate your pet's vision and eye health? </h3>
+                        </label>
+                        <input type="range" class="form-control-range" min="0" max="100" id="form14" value=0
+                          oninput="outputUpdate14(this.value)">
+                        <output class="op rfs-20 fw-bold" style="text-align:center;" id="op14">0</output>
+                        <br>
+                        <br>
+                        <label for="formControlRange">
+                          <h3>Please rate your pet's overall quality of life on a scale of 1 to 100. </h3>
+                        </label>
+                        <input type="range" class="form-control-range" min="0" max="100" id="form15" value=0
+                          oninput="outputUpdate15(this.value)">
+                        <output class="op rfs-20 fw-bold" style="text-align:center;" id="op15">0</output>
+                        <br>
+                        <br>
 
 
-                           </div>
-                    </div>
-
+                      </div>
                   </div>
 
                 </div>
-                 </p>
-                </div>
 
-
-
-
+              </div>
+              </p>
             </div>
-<div class="row justify-content-center">
+
+
+
+
+          </div>
+          <div class="row justify-content-center">
             <div class="lc-block text-center col-md-8">
-                <div editable="rich">
-                    <h1 class="rfs-25 fw-bold ">
-                        <output class="display-6 fw-normal rfs-25 fw-bold op" style="text-align:center;" id="avg">Click the button below to Unlock your score!</output>
-                        <output class="display-6 fw-normal rfs-25 fw-bold " style="text-align:center;" id="score"></output>
-                        <br></h1><br><h1>
-                        <button type="button" id="submitBtn" class="btn btn-outline-primary " onclick="average()" >Submit</button>
-                    </h1>
-                </div>
+              <div editable="rich">
+                <h1 class="rfs-25 fw-bold ">
+                  <output class="display-6 fw-normal rfs-25 fw-bold op" style="text-align:center;" id="avg">Click the
+                    button below to Unlock your score!</output>
+                  <output class="display-6 fw-normal rfs-25 fw-bold " style="text-align:center;" id="score"></output>
+                  <br>
+                </h1><br>
+                <h1>
+                  <button type="button" id="submitBtn" class="btn btn-outline-primary "
+                    onclick="average()">Submit</button>
+                </h1>
+              </div>
             </div>
+          </div>
         </div>
-        </div>
-    </div>
+      </div>
 
 
 
@@ -473,180 +637,184 @@ window.onscroll = function() {
 
 
 
-<div class="container">
-<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-<div class="col-md-4 d-flex align-items-center">
+      <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <div class="col-md-4 d-flex align-items-center">
 
-  <span class="mb-3 mb-md-0 text-muted">&copy; 2023 : Petfolio</span>
-</div>
+            <span class="mb-3 mb-md-0 text-muted">&copy; 2023 : Petfolio</span>
+          </div>
 
-<ul class="nav col-md-4 justify-content-end list-unstyled d-flex"><pre>
+          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <pre>
 </pre>
-<a class="btn btn-outline-light btn-floating m-1"  role="button"><img src="https://cdn-icons-png.flaticon.com/512/5783/5783311.png" height="50" width="50" alt=""></a>
+            <a class="btn btn-outline-light btn-floating m-1" role="button"><img
+                src="https://cdn-icons-png.flaticon.com/512/5783/5783311.png" height="50" width="50" alt=""></a>
 
-</ul>
-</footer>
-</div>
-
-
-
+          </ul>
+        </footer>
+      </div>
 
 
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-
-    <!-- Optional JavaScript -->
-       <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-     <!-- jQuery -->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
-       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-       <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-       <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+      <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <!-- jQuery -->
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
-<!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-     <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 
-    <script>
-        var avg=0
+
+      <!-- Bootstrap JS -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+      <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+      <script>
+        var avg = 0
         function outputUpdate1(value) {
-            document.getElementById("op1").textContent = value
+          document.getElementById("op1").textContent = value
         }
         function outputUpdate2(value) {
-            document.getElementById("op2").textContent = value
+          document.getElementById("op2").textContent = value
         }
         function outputUpdate3(value) {
-            document.getElementById("op3").textContent = value
+          document.getElementById("op3").textContent = value
         }
         function outputUpdate4(value) {
-            document.getElementById("op4").textContent = value
+          document.getElementById("op4").textContent = value
         }
         function outputUpdate5(value) {
-            document.getElementById("op5").textContent = value
+          document.getElementById("op5").textContent = value
         }
         function outputUpdate6(value) {
-            document.getElementById("op6").textContent = value
+          document.getElementById("op6").textContent = value
         }
         function outputUpdate7(value) {
-            document.getElementById("op7").textContent = value
+          document.getElementById("op7").textContent = value
         }
         function outputUpdate8(value) {
-            document.getElementById("op8").textContent = value
+          document.getElementById("op8").textContent = value
         }
         function outputUpdate9(value) {
-            document.getElementById("op9").textContent = value
+          document.getElementById("op9").textContent = value
         }
         function outputUpdate10(value) {
-            document.getElementById("op10").textContent = value
+          document.getElementById("op10").textContent = value
 
         }
         function outputUpdate11(value) {
-            document.getElementById("op11").textContent = value
+          document.getElementById("op11").textContent = value
 
         }
         function outputUpdate12(value) {
-            document.getElementById("op12").textContent = value
+          document.getElementById("op12").textContent = value
 
         }
         function outputUpdate13(value) {
-            document.getElementById("op13").textContent = value
+          document.getElementById("op13").textContent = value
 
         }
         function outputUpdate14(value) {
-            document.getElementById("op14").textContent = value
+          document.getElementById("op14").textContent = value
 
         }
         function outputUpdate15(value) {
-            document.getElementById("op15").textContent = value
+          document.getElementById("op15").textContent = value
 
         }
         function average() {
-            sum = parseInt(document.getElementById("op1").textContent) + parseInt(document.getElementById("op2").textContent) + parseInt(document.getElementById("op3").textContent) + parseInt(document.getElementById("op4").textContent) + parseInt(document.getElementById("op5").textContent) + parseInt(document.getElementById("op6").textContent) + parseInt(document.getElementById("op7").textContent) + parseInt(document.getElementById("op8").textContent) + parseInt(document.getElementById("op9").textContent) + parseInt(document.getElementById("op10").textContent) + parseInt(document.getElementById("op11").textContent) + parseInt(document.getElementById("op12").textContent) + parseInt(document.getElementById("op13").textContent) + parseInt(document.getElementById("op14").textContent) + parseInt(document.getElementById("op15").textContent)
-            mean =(sum/15)/10
-            if(mean>0 && mean<1)
-            {
-                mean=1
-            }
-            else
-            {
-                mean=Math.round(mean)
-            }
-            if(mean==10)
-                {
-                    tip ="Congratulations! You have a perfect score."
-                    document.getElementById("avg").textContent=tip
-                    document.getElementById("score").textContent=mean
-                }
-            else if(mean == 9)
-                {
-                    tip ="Well done! You have a near perfect score."
-                    document.getElementById("avg").textContent=tip
-                    document.getElementById("score").textContent=mean
-                }
-            else if(mean==8)
-                {
-                    tip ="Very good! You have a good score."
-                    document.getElementById("avg").textContent=tip
-                    document.getElementById("score").textContent=mean
-                }
-            else if(mean==7)
-                {
-                    tip ="You have a good score, but you can still do better!"
-                    document.getElementById("avg").textContent=tip
-                    document.getElementById("score").textContent=mean
-                }
-            else if(mean==6)
-                {
-                    tip ="Your Score is just above Average! You can do better by reading reviews of other people on the our blog."
-                    document.getElementById("avg").textContent=tip
-                    document.getElementById("score").textContent=mean
-                }
-            else if(mean==5)
-                {
-                    tip ="You have an Average Score. Refer our blog to get more help, on how to improve your pet's health!"
-                    document.getElementById("avg").textContent=tip
-                    document.getElementById("score").textContent=mean
-                }
-            else if(mean==4)
-                {
-                    tip ="Your score is below average! Refer a vet to get further guidance."
-                    document.getElementById("avg").textContent=tip
-                    document.getElementById("score").textContent=mean
-                }
-            else if(mean==3)
-                {
-                    tip ="You should take your pet to a vet as soon as possible!"
-                    document.getElementById("avg").textContent=tip
-                    document.getElementById("score").textContent=mean
-                }
-            else if(mean==2)
-                {
-                    tip ="Your pet may need the help of a professional!"
-                    document.getElementById("avg").textContent=tip
-                    document.getElementById("score").textContent=mean
-                }
-            else if(mean==1)
-                {
-                    tip ="Your pet is in a extremely bad situation!"
-                    document.getElementById("avg").textContent=tip
-                    document.getElementById("score").textContent=mean
-                }
+          sum = parseInt(document.getElementById("op1").textContent) + parseInt(document.getElementById("op2").textContent) + parseInt(document.getElementById("op3").textContent) + parseInt(document.getElementById("op4").textContent) + parseInt(document.getElementById("op5").textContent) + parseInt(document.getElementById("op6").textContent) + parseInt(document.getElementById("op7").textContent) + parseInt(document.getElementById("op8").textContent) + parseInt(document.getElementById("op9").textContent) + parseInt(document.getElementById("op10").textContent) + parseInt(document.getElementById("op11").textContent) + parseInt(document.getElementById("op12").textContent) + parseInt(document.getElementById("op13").textContent) + parseInt(document.getElementById("op14").textContent) + parseInt(document.getElementById("op15").textContent)
+          mean = (sum / 15) / 10
+          if (mean > 0 && mean < 1) {
+            mean = 1
+          }
+          else {
+            mean = Math.round(mean)
+          }
+          if (mean == 10) {
+            tip = "Congratulations! You have a perfect score."
+            document.getElementById("avg").textContent = tip
+            document.getElementById("score").textContent = mean
+          }
+          else if (mean == 9) {
+            tip = "Well done! You have a near perfect score."
+            document.getElementById("avg").textContent = tip
+            document.getElementById("score").textContent = mean
+          }
+          else if (mean == 8) {
+            tip = "Very good! You have a good score."
+            document.getElementById("avg").textContent = tip
+            document.getElementById("score").textContent = mean
+          }
+          else if (mean == 7) {
+            tip = "You have a good score, but you can still do better!"
+            document.getElementById("avg").textContent = tip
+            document.getElementById("score").textContent = mean
+          }
+          else if (mean == 6) {
+            tip = "Your Score is just above Average! You can do better by reading reviews of other people on the our blog."
+            document.getElementById("avg").textContent = tip
+            document.getElementById("score").textContent = mean
+          }
+          else if (mean == 5) {
+            tip = "You have an Average Score. Refer our blog to get more help, on how to improve your pet's health!"
+            document.getElementById("avg").textContent = tip
+            document.getElementById("score").textContent = mean
+          }
+          else if (mean == 4) {
+            tip = "Your score is below average! Refer a vet to get further guidance."
+            document.getElementById("avg").textContent = tip
+            document.getElementById("score").textContent = mean
+          }
+          else if (mean == 3) {
+            tip = "You should take your pet to a vet as soon as possible!"
+            document.getElementById("avg").textContent = tip
+            document.getElementById("score").textContent = mean
+          }
+          else if (mean == 2) {
+            tip = "Your pet may need the help of a professional!"
+            document.getElementById("avg").textContent = tip
+            document.getElementById("score").textContent = mean
+          }
+          else if (mean == 1) {
+            tip = "Your pet is in a extremely bad situation!"
+            document.getElementById("avg").textContent = tip
+            document.getElementById("score").textContent = mean
+          }
 
-            else if(mean==0)
-                {
-                    tip ="You did not enter any values."
-                    document.getElementById("avg").textContent=tip
-                    document.getElementById("score").textContent="Enter values and try again!"
-                }
+          else if (mean == 0) {
+            tip = "You did not enter any values."
+            document.getElementById("avg").textContent = tip
+            document.getElementById("score").textContent = "Enter values and try again!"
+          }
 
 
         }
-        
-    </script>
+
+      </script>
 </body>
+
 </html>
